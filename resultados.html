@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "outline": "#707973",
+                    "background": "#f8f9fa",
+                    "on-secondary-container": "#004972",
+                    "surface-variant": "#e1e3e4",
+                    "secondary-fixed-dim": "#94ccff",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#0e5138",
+                    "tertiary-fixed-dim": "#9cd83e",
+                    "on-background": "#191c1d",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#aeec50",
+                    "surface": "#f8f9fa",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#2c694e",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-fixed": "#001d32",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-highest": "#e1e3e4",
+                    "tertiary-container": "#456900",
+                    "outline-variant": "#bfc9c1",
+                    "on-surface-variant": "#404943",
+                    "on-surface": "#191c1d",
+                    "tertiary": "#334f00",
+                    "secondary-fixed": "#cde5ff",
+                    "surface-bright": "#f8f9fa",
+                    "secondary": "#006399",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#95d4b3",
+                    "tertiary-fixed": "#b7f558",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-tertiary-fixed": "#121f00",
+                    "on-primary-fixed": "#002114",
+                    "primary-fixed-dim": "#95d4b3",
+                    "primary": "#0f5238",
+                    "on-tertiary-fixed-variant": "#324f00",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#2d6a4f",
+                    "surface-container-high": "#e7e8e9",
+                    "on-secondary-fixed-variant": "#004b74",
+                    "surface-dim": "#d9dadb",
+                    "secondary-container": "#67bafd",
+                    "on-primary-container": "#a8e7c5",
+                    "primary-fixed": "#b1f0ce",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .asymmetric-mural {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.5rem;
+      }
+      .soft-elevate {
+        box-shadow: 0 20px 50px -12px rgba(15, 82, 56, 0.08);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .soft-elevate:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px -12px rgba(15, 82, 56, 0.12);
+      }
+      .fluid-heading {
+        font-size: clamp(3rem, 8vw, 6rem);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- TopAppBar with Glassmorphism -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-white/20">
+<div class="flex items-center justify-between px-8 py-5 max-w-7xl mx-auto">
+<div class="flex items-center gap-6">
+<h1 class="text-2xl font-extrabold tracking-tighter text-primary font-headline">The Living Archive</h1>
+</div>
+<nav class="hidden lg:flex gap-10 items-center">
+<a class="text-zinc-600 hover:text-primary transition-colors font-label font-medium" href="index.html">Home</a>
+<a class="text-zinc-600 hover:text-primary transition-colors font-label font-medium" href="metodologia.html">Metodologia</a>
+<a class="text-zinc-600 hover:text-primary transition-colors font-label font-medium" href="atividades.html">Atividades</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-0.5 font-label" href="resultados.html">Resultados</a>
+<a class="text-zinc-600 hover:text-primary transition-colors font-label font-medium" href="equipe.html">Equipe</a>
+<a class="text-zinc-600 hover:text-primary transition-colors font-label font-medium" href="dicas.html">Dicas</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="hidden md:flex text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border-2 border-primary/10">
+<img alt="User avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXuOit8B3oWxCyCy2H2UNz1BsLnPqIB5Kw9rws94IwwPrDhTxdK1jFoe2JZ1tTTwp6mpBuu9BlnGLaHlurPAOZ2u9myNE0YVfyAtwEL72zbIJzKwedWCPe5j1Qzxi4bmM2IPHQP_gRcMHwBLf6c6v91AWOraepKRe6m0Dp3f6zHOmcL5oXZst9sfD9g96X6BPKPxMbFRbL5zn57YoV2gm-6hZ8P-FNn5z_iuE2o_QgYaNIlnn66ao3NVbqKz_XDL-Fc_MMAnnJb5ak"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-32">
+<!-- Hero Section: Impacto e Arte (Asymmetric Desktop Layout) -->
+<section class="relative px-8 py-16 lg:py-32 max-w-7xl mx-auto">
+<div class="absolute -top-20 -right-20 -z-10 w-[600px] h-[600px] bg-primary-fixed/20 rounded-full blur-[120px]"></div>
+<div class="flex flex-col lg:flex-row gap-20 items-start">
+<div class="lg:w-3/5 space-y-10">
+<div class="inline-flex items-center gap-3 px-4 py-2 bg-tertiary-fixed/30 text-on-tertiary-fixed font-label font-bold rounded-full text-xs tracking-widest uppercase">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Relatório de Impacto 2024
+                    </div>
+<h2 class="fluid-heading font-headline font-extrabold tracking-tight text-primary leading-[0.95]">
+                        Impacto <br/> <span class="text-primary-container/60">e Arte.</span>
+</h2>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed font-light">
+                        Transformando consciência em legado. Através da educação circular, o Lar Fabiano de Cristo redefine o futuro da sustentabilidade social com arte e presença.
+                    </p>
+<div class="flex items-center gap-8 pt-4">
+<button class="px-10 py-5 bg-primary text-on-primary font-bold rounded-2xl soft-elevate flex items-center gap-3 text-lg">
+                            Explorar Arquivo
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<a class="font-bold text-primary flex items-center gap-2 hover:underline underline-offset-8" href="#">
+                            Nossa história
+                        </a>
+</div>
+</div>
+<!-- Desktop Impact Cards Grid -->
+<div class="lg:w-2/5 grid grid-cols-2 gap-6 self-center">
+<div class="bg-white p-8 rounded-[2rem] soft-elevate border border-white">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+<div class="text-5xl font-headline font-extrabold text-primary mb-2">94%</div>
+<div class="text-sm text-zinc-500 font-label font-bold uppercase tracking-widest">Mudança de Hábito</div>
+</div>
+<div class="bg-primary p-8 rounded-[2rem] soft-elevate mt-12">
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-6" data-icon="groups">groups</span>
+<div class="text-5xl font-headline font-extrabold text-on-primary mb-2">12k+</div>
+<div class="text-sm text-primary-fixed/80 font-label font-bold uppercase tracking-widest">Cidadãos</div>
+</div>
+<div class="bg-white p-8 rounded-[2rem] soft-elevate -mt-6">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="psychology">psychology</span>
+<div class="text-5xl font-headline font-extrabold text-primary mb-2">87%</div>
+<div class="text-sm text-zinc-500 font-label font-bold uppercase tracking-widest">Consciência</div>
+</div>
+<div class="bg-tertiary-fixed p-8 rounded-[2rem] soft-elevate mt-6">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-4xl mb-6" data-icon="eco">eco</span>
+<div class="text-5xl font-headline font-extrabold text-on-tertiary-fixed mb-2">2.4t</div>
+<div class="text-sm text-on-tertiary-fixed-variant font-label font-bold uppercase tracking-widest">Reutilizado</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Galeria do Amanhã: Sophisticated Desktop Mural -->
+<section class="bg-surface-container-lowest/50 py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-10">
+<div class="max-w-2xl">
+<h3 class="text-5xl font-headline font-bold text-primary mb-6">Galeria do Amanhã</h3>
+<p class="text-xl text-on-surface-variant leading-relaxed">Fragmentos das oficinas de ressignificação e arte circular, onde o descarte se torna expressão viva da comunidade.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-14 h-14 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/5 transition-colors group">
+<span class="material-symbols-outlined text-primary group-hover:-translate-x-1 transition-transform" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center soft-elevate group">
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="asymmetric-mural">
+<!-- Featured Image -->
+<div class="col-span-12 lg:col-span-8 group relative overflow-hidden rounded-[2.5rem] soft-elevate h-[600px]">
+<img alt="Workshop photo" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmKI9w5PNjBKnAhjDwjptWE8PZBqLgdqQOQaPNFnRgI2cWlXFNHHGuDx0UWsMxI9S9_tYy32ScseSjd3lw-NfTMvjp2jDslnvqLLlIi4-QmoJYyD1Ha8fVnTy46851JYk-_UOZf5Xs7Mi7bnVoP5KRYFUY0kY3I7BafB8T8Fu5_5tBrlG6zmr-h4qKHWewTC2ltxZsZDMIkBRAt_sMYmp1KhTDC_vSw6C9iihmPWWw-iWarfQSc7CDaTkR9OkU1-42TingETXLYqwD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-12">
+<span class="text-primary-fixed text-sm font-bold uppercase tracking-[0.2em] mb-4">Intercâmbio Geracional</span>
+<h4 class="text-white text-4xl font-headline font-bold">Oficina de Criação Coletiva</h4>
+</div>
+</div>
+<!-- Quote Card -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+<div class="relative bg-primary-fixed/10 rounded-[2.5rem] p-10 flex-1 flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-primary text-6xl mb-6 block mx-auto opacity-30" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-2xl font-medium text-primary italic leading-relaxed">
+                                "Aqui eu aprendi que nada termina, tudo se transforma em memória e novas cores."
+                            </p>
+</div>
+<div class="group relative overflow-hidden rounded-[2.5rem] soft-elevate h-[280px]">
+<img alt="Recycling art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyyoZ7w2K-Px7sZCgCpCrqB3kqEOevgTnzOg_wptbSVhiEa90Kpc1yVyFpdmJwH5KjVvjG7vLPA9uxwX6yOHLHlSRa84r3lfjfKK5_-dphRdjpi5Udd7yM3RuJIDj_juUCNgz3TJhHXx_rmFndkjNd5WO4nkp-Fj-pstS6AxOsxwkHGHh2ip1nf3RvK6_xuXbYU6h-o7IAqshn4IrZ2DUBkzZQe8lKW_qrCT3ET2KUIRHcsh4ZLpb4wkhEKJBrCpguf2YffFio8doy"/>
+</div>
+</div>
+<!-- Bottom Row Mural -->
+<div class="col-span-12 lg:col-span-5 group relative overflow-hidden rounded-[2.5rem] soft-elevate h-[400px]">
+<img alt="Social impact" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFTp1rMRp_lcKqcJxKjG3hNcVPwQIS1zuaI2y-3YHBooLjTgSMtAB-o1n1xkixa5tZGTElGW0I3KskJKwr82zID2dav3jNL8ivGIeEsH6UeXs0hY0Ghtkv33ZpyO2vx1cZOKb42vpPCFOE4oFSfXRJbKhvQlDXxO-yNe5dsNvJWnd-tn791a-ifGrnJktFe3vEaweGcL83m7cC9NL0r3IJ-t33YebsTKKiSkrNoIqcoPTbAIPYFOIp_SD6vRYCopMjU1rmAYAmJrIJ"/>
+</div>
+<div class="col-span-12 lg:col-span-7 group relative overflow-hidden rounded-[2.5rem] soft-elevate h-[400px]">
+<img alt="Art exhibit" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLLArxcpb1FEC3bzCo3PZysTZnhmmdO_36WK9TbmY6QAjmO9Kmu7ghltt5iwDCQ3fbJSkLKzbkJ3OcSi0IIN9fsByWGm-OeQrcl0wp4SmEqMJd54Fkv6GzdyIbdUgIoashRe46MvPckjD7fUUOtW64O6oeNWgrQYQsQDcUlQV6f-PP7nqFIbV_I3BpvK0TDDLIXpOg3OhrKvInGCTF0DLmLM_Lq8Ozr5-vR32UIBpzGL7HaptDqkbIjichOvRTois-8sGkv_0rr30L"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials: Horizontal Emotional Layout -->
+<section class="py-32 px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+<div class="relative">
+<div class="absolute -top-16 -left-16 w-64 h-64 bg-primary-fixed/30 rounded-full blur-[100px] -z-10"></div>
+<div class="bg-white p-16 rounded-[3rem] soft-elevate relative z-10">
+<span class="material-symbols-outlined text-primary text-8xl opacity-10 absolute top-12 left-12" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div class="space-y-10 relative">
+<p class="text-3xl md:text-4xl font-body leading-[1.4] text-on-surface font-light">
+                                "O projeto trouxe cor para os meus dias. Ver as crianças aprendendo a cuidar da terra me faz acreditar que deixarei um mundo melhor."
+                            </p>
+<div class="flex items-center gap-6 pt-10 border-t border-zinc-100">
+<div class="w-20 h-20 rounded-full overflow-hidden border-4 border-primary/5">
+<img alt="Dona Maria" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCFEi8C_7ExCprfgT6F_4KsQwr8HyryfgAFJdNDkixLe6yWhdRRo1EkAAVUCmf5w7K3RPWupAHVmdQhCfucdvJ0BIr8RCZiYKR-7uTxxoC7exhHupMlpoTYkC0dzU3o4uZKlaSVyHWfgZ2TiIR2OlUKeuTkVBwTUEAp3blRQ-Wo89NYAtpK3BL6XGnxttrcUZKDwo0iGGC6mi7U9y11HpDs89lVw8Qp35EX8fxQnOA8Om7c4i_qV8x_hJZTTqQw4k3Y9VQNCxv3-Gg"/>
+</div>
+<div>
+<div class="text-2xl font-headline font-extrabold text-primary">Dona Maria, 74 anos</div>
+<div class="text-zinc-500 font-medium">Unidade Lar Fabiano de Cristo</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-16">
+<div class="flex items-start gap-12 group">
+<div class="text-7xl font-headline font-black text-primary-fixed-dim/40 group-hover:text-primary-fixed-dim transition-colors">01.</div>
+<div class="space-y-4">
+<h5 class="text-3xl font-headline font-bold text-primary">Vozes do Futuro</h5>
+<p class="text-xl text-on-surface-variant leading-relaxed">"Eu não sabia que plástico virava brinquedo. Agora eu guardo tudo e ensino minha mãe." — <strong class="text-primary">Enzo, 8 anos</strong></p>
+</div>
+</div>
+<div class="flex items-start gap-12 group">
+<div class="text-7xl font-headline font-black text-primary-fixed-dim/40 group-hover:text-primary-fixed-dim transition-colors">02.</div>
+<div class="space-y-4">
+<h5 class="text-3xl font-headline font-bold text-primary">Conexão Humana</h5>
+<p class="text-xl text-on-surface-variant leading-relaxed">A metodologia do Living Archive foca na escuta ativa e no registro emocional das descobertas sustentáveis em cada comunidade.</p>
+</div>
+</div>
+<button class="text-xl text-primary font-bold flex items-center gap-4 group pt-4">
+                        Ver todos os depoimentos
+                        <span class="material-symbols-outlined group-hover:translate-x-3 transition-transform text-3xl" data-icon="trending_flat">trending_flat</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Call to Action: Immersive Banner -->
+<section class="px-8 mb-32">
+<div class="max-w-7xl mx-auto rounded-[4rem] bg-primary relative overflow-hidden px-16 py-24 md:py-32 text-center soft-elevate">
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-container/20 to-primary opacity-50"></div>
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_rgba(255,255,255,0.1),_transparent)]"></div>
+<div class="relative z-10 max-w-4xl mx-auto space-y-12">
+<h2 class="text-5xl md:text-7xl font-headline font-extrabold text-white leading-tight">Pronto para fazer parte dessa narrativa?</h2>
+<p class="text-primary-fixed text-2xl font-light">Acesse o relatório completo de resultados sociais e ambientais de 2024.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-8 pt-4">
+<button class="px-12 py-6 bg-tertiary-fixed text-on-tertiary-fixed font-black rounded-2xl text-lg hover:scale-105 transition-transform soft-elevate">
+                            Download Impact Report (PDF)
+                        </button>
+<button class="px-12 py-6 bg-white/10 backdrop-blur-xl text-white font-bold rounded-2xl text-lg border border-white/20 hover:bg-white/20 transition-all">
+                            Conhecer Metodologia
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer: Clean & Modern -->
+<footer class="w-full bg-white border-t border-zinc-100 mt-20">
+<div class="max-w-7xl mx-auto px-8 py-20">
+<div class="flex flex-col lg:flex-row justify-between items-start gap-16 mb-16">
+<div class="space-y-6">
+<h2 class="text-3xl font-extrabold text-primary font-headline tracking-tighter">The Living Archive</h2>
+<p class="text-zinc-500 max-w-xs text-lg font-light leading-relaxed">Preservando nossa narrativa ecológica através da arte e educação comunitária.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div class="space-y-6">
+<h4 class="font-bold text-zinc-900 uppercase tracking-widest text-xs">Explore</h4>
+<nav class="flex flex-col gap-4">
+<a class="text-zinc-500 hover:text-primary transition-colors text-lg" href="#">Exhibitions</a>
+<a class="text-zinc-500 hover:text-primary transition-colors text-lg" href="#">Archive</a>
+<a class="text-zinc-500 hover:text-primary transition-colors text-lg" href="#">Impact Report</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-zinc-900 uppercase tracking-widest text-xs">Community</h4>
+<nav class="flex flex-col gap-4">
+<a class="text-zinc-500 hover:text-primary transition-colors text-lg" href="#">Methodology</a>
+<a class="text-zinc-500 hover:text-primary transition-colors text-lg" href="#">Workshops</a>
+<a class="text-zinc-500 hover:text-primary transition-colors text-lg" href="#">Contact</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-zinc-900 uppercase tracking-widest text-xs">Social</h4>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-xl bg-zinc-50 flex items-center justify-center text-zinc-600 hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-2xl">share</span>
+</button>
+<button class="w-12 h-12 rounded-xl bg-zinc-50 flex items-center justify-center text-zinc-600 hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-2xl">language</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-zinc-100 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-zinc-400 font-medium">© 2024 The Living Archive. Todos os direitos reservados.</p>
+<div class="flex gap-10">
+<a class="text-sm text-zinc-400 hover:text-primary font-medium" href="#">Privacidade</a>
+<a class="text-sm text-zinc-400 hover:text-primary font-medium" href="#">Termos</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

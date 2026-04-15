@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be_Vietnam_Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#cde5ff",
+                    "outline-variant": "#bfc9c1",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-primary-container": "#a8e7c5",
+                    "on-primary-fixed": "#002114",
+                    "tertiary-container": "#456900",
+                    "on-secondary-fixed": "#001d32",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#334f00",
+                    "outline": "#707973",
+                    "on-tertiary-fixed-variant": "#324f00",
+                    "surface-container": "#edeeef",
+                    "on-surface-variant": "#404943",
+                    "primary": "#0f5238",
+                    "secondary": "#006399",
+                    "primary-fixed": "#b1f0ce",
+                    "background": "#f8f9fa",
+                    "primary-fixed-dim": "#95d4b3",
+                    "surface-variant": "#e1e3e4",
+                    "secondary-fixed-dim": "#94ccff",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2e3132",
+                    "surface-dim": "#d9dadb",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#67bafd",
+                    "on-background": "#191c1d",
+                    "on-primary-fixed-variant": "#0e5138",
+                    "inverse-primary": "#95d4b3",
+                    "on-tertiary-container": "#aeec50",
+                    "on-surface": "#191c1d",
+                    "tertiary-fixed-dim": "#9cd83e",
+                    "surface-tint": "#2c694e",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#121f00",
+                    "on-secondary-container": "#004972",
+                    "surface-bright": "#f8f9fa",
+                    "surface": "#f8f9fa",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary-fixed-variant": "#004b74",
+                    "surface-container-high": "#e7e8e9",
+                    "tertiary-fixed": "#b7f558",
+                    "primary-container": "#2d6a4f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.5rem",
+                    "3xl": "2.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #0f5238 0%, #006399 100%);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .deep-diffuse-shadow {
+            box-shadow: 0 20px 50px -12px rgba(15, 82, 56, 0.08);
+        }
+        .tonal-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .tonal-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 40px 80px -15px rgba(15, 82, 56, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-x-hidden">
+<!-- TopAppBar Desktop -->
+<header class="fixed top-0 w-full z-50 glass-nav border-none">
+<div class="flex items-center justify-between px-12 py-5 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="eco">eco</span>
+</div>
+<span class="text-2xl font-extrabold text-primary tracking-tight font-headline">Living Archive</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold text-on-surface-variant tracking-wide hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-sm font-bold text-primary tracking-wide hover:opacity-70 transition-opacity" href="metodologia.html">Metodologia</a>
+<a class="text-sm font-semibold text-on-surface-variant tracking-wide hover:text-primary transition-colors" href="atividades.html">Atividades</a>
+<a class="text-sm font-semibold text-on-surface-variant tracking-wide hover:text-primary transition-colors" href="resultados.html">Resultados</a>
+<a class="text-sm font-semibold text-on-surface-variant tracking-wide hover:text-primary transition-colors" href="equipe.html">Equipe</a>
+<a class="text-sm font-semibold text-on-surface-variant tracking-wide hover:text-primary transition-colors" href="dicas.html">Dicas</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2.5 bg-primary text-white text-sm font-bold rounded-full hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+                Participar
+            </button>
+<button class="md:hidden p-2 hover:bg-emerald-50 rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center px-12 signature-gradient text-white overflow-hidden pt-20">
+<div class="absolute inset-0 opacity-30">
+<img class="w-full h-full object-cover mix-blend-overlay scale-110" data-alt="Nature textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC37xNH4QwhjHBpKyb5E8m77lQNbvw2Db_XcsLJlpMzLiMgRcJ2ehjcqEHPkSLOFGKA3XQwolZwGx5F1J_Avs47Int3RhBNj23Phn-493qXBtZslXvaazdgEyKVpCjuV9s4xDWoMMFOrH0IqvSQx6ie4cpArEjhFTcGhWizw4s9qPHYQ6yjiTUJNJf396mp4LorFOntVvDPF6lGsxQlUxthEPfw7eQOypwgtbMZ-5gB2YU6ffK1PQs3E-D5itAAoXgebAh0AZ9DXLU8"/>
+</div>
+<div class="relative z-10 max-w-[1440px] mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="max-w-2xl">
+<span class="inline-block px-5 py-2 rounded-full bg-white/10 backdrop-blur-md text-xs font-extrabold tracking-[0.2em] uppercase mb-8 border border-white/10">Nossa Metodologia</span>
+<h1 class="text-7xl lg:text-9xl font-headline font-extrabold tracking-tighter leading-[0.85] mb-10">O Nosso <br/>Ciclo Vivo</h1>
+<p class="text-xl lg:text-2xl text-primary-fixed leading-relaxed font-light opacity-90 max-w-xl">
+                    Uma abordagem participativa e interdisciplinar que transforma o aprendizado em um ecossistema de crescimento constante, sustentabilidade e inovação social.
+                </p>
+<div class="mt-12 flex items-center gap-6">
+<button class="bg-white text-primary px-10 py-5 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all flex items-center gap-2">
+                        Explorar Ciclo
+                        <span class="material-symbols-outlined" data-icon="arrow_downward">arrow_downward</span>
+</button>
+</div>
+</div>
+<div class="hidden md:flex justify-end">
+<div class="w-96 h-96 rounded-full border-[32px] border-white/5 flex items-center justify-center relative">
+<div class="absolute inset-0 animate-[spin_20s_linear_infinite] border-t-2 border-white/20 rounded-full"></div>
+<span class="material-symbols-outlined text-9xl text-white/20" data-icon="all_inclusive">all_inclusive</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Fluxo da Descoberta Section -->
+<section class="bg-surface py-32 px-12 relative overflow-hidden">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-24">
+<div class="max-w-2xl">
+<h2 class="text-5xl lg:text-6xl font-headline font-bold text-primary tracking-tight mb-6">O Fluxo da Descoberta</h2>
+<p class="text-xl text-on-surface-variant font-light">Nossa jornada não é uma linha reta, mas uma espiral de evolução contínua que pulsa com a comunidade.</p>
+</div>
+<div class="hidden md:block">
+<span class="text-9xl font-headline font-black text-primary/5 select-none">METODO</span>
+</div>
+</div>
+<!-- Dynamic Staggered Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative">
+<!-- Step 1 -->
+<div class="md:col-span-4 md:mt-0">
+<div class="tonal-card bg-surface-container-lowest p-10 rounded-3xl deep-diffuse-shadow relative group h-full">
+<div class="w-14 h-14 bg-tertiary-fixed rounded-2xl flex items-center justify-center text-primary font-bold text-2xl mb-8 group-hover:rotate-12 transition-transform">1</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">Diagnóstico</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">Levantamento profundo de hábitos e escuta ativa da comunidade para entender as raízes locais.</p>
+<div class="pt-6 border-t border-surface-variant/30">
+<span class="text-xs font-black uppercase tracking-widest text-secondary">Fundação Local</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="md:col-span-4 md:mt-24">
+<div class="tonal-card bg-secondary-fixed p-10 rounded-3xl deep-diffuse-shadow relative group h-full">
+<div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-2xl mb-8 group-hover:-rotate-12 transition-transform">2</div>
+<h3 class="text-2xl font-headline font-bold text-on-secondary-container mb-4">Planejamento</h3>
+<p class="text-on-secondary-container/80 text-lg leading-relaxed mb-6">Organização de oficinas colaborativas onde cada voz ajuda a desenhar o futuro sustentável.</p>
+<div class="pt-6 border-t border-on-secondary-container/10">
+<span class="text-xs font-black uppercase tracking-widest text-on-secondary-container">Co-Criação</span>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="md:col-span-4 md:mt-12">
+<div class="tonal-card bg-surface-container-highest p-10 rounded-3xl deep-diffuse-shadow relative h-full overflow-hidden">
+<div class="absolute -right-8 -top-8 p-4 opacity-[0.03]">
+<span class="material-symbols-outlined text-[12rem]" data-icon="diversity_3">diversity_3</span>
+</div>
+<div class="w-14 h-14 bg-tertiary-container rounded-2xl flex items-center justify-center text-white font-bold text-2xl mb-8">3</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">Execução</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">Vivências lúdicas e práticas. O fazer que ensina e a prática que transforma a realidade imediata.</p>
+<div class="pt-6 border-t border-surface-variant/30">
+<span class="text-xs font-black uppercase tracking-widest text-tertiary-container">Mão na Massa</span>
+</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="md:col-start-3 md:col-span-4 md:-mt-12">
+<div class="tonal-card bg-white p-10 rounded-3xl deep-diffuse-shadow relative h-full border-l-[12px] border-tertiary-fixed">
+<div class="mb-6 flex justify-between items-center">
+<span class="text-5xl font-headline font-extrabold text-primary/10">04</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">Mostra Cultural</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-2">Celebração e exposição de resultados. Um momento de brilho onde a comunidade reconhece sua potência.</p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="md:col-span-4 md:mt-16">
+<div class="tonal-card bg-primary text-white p-10 rounded-3xl deep-diffuse-shadow relative h-full overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-8">
+<div class="text-6xl font-headline font-black text-tertiary-fixed opacity-40">05</div>
+<button class="bg-tertiary-fixed text-primary px-5 py-2.5 rounded-full font-bold text-xs hover:scale-105 transition-transform">RESULTADOS</button>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">Avaliação Contínua</h3>
+<p class="text-primary-fixed/80 text-lg leading-relaxed">Ciclo de feedback e registros contínuos que alimentam o início de um novo e mais forte diagnóstico.</p>
+</div>
+<div class="absolute -bottom-12 -right-12 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Inspiradores Section Desktop -->
+<section class="bg-surface-container-low py-32 px-12">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<!-- Paulo Freire -->
+<div class="space-y-10">
+<div class="w-24 h-1.5 bg-primary/20 rounded-full"></div>
+<blockquote class="text-4xl lg:text-5xl font-headline italic font-light text-primary leading-tight">
+                        "Educação não transforma o mundo. <span class="font-bold">Educação muda pessoas.</span> Pessoas transformam o mundo."
+                    </blockquote>
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 rounded-3xl bg-primary-fixed overflow-hidden deep-diffuse-shadow">
+<img class="w-full h-full object-cover grayscale" data-alt="Paulo Freire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3bctlu3Pp3LLOAitrRble3mnP5veUJ7vE9OeqJWiTtxHmoPuh6X7ppzng6BLUYef5Xn7GSa7n54_Cwdg5Vym0t9iOlW_U1goiTopefSmA3-Y9sgvAfLYLQyrFeSOWgrhfUOAZvgHSkIxKLylJqMO7qXcjlq1mxsgDvlnOizwbSHqxKVFHmeH6cYKJ37-8_0NvlaMJcXunJhl5hc28k9qZht0YUCFehJcHSz4cm0mDvv4lcc4HcefelWTyTI2BhHgl4ONdpD0j5SmZ"/>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold text-primary">Paulo Freire</h4>
+<p class="text-sm text-on-surface-variant uppercase tracking-[0.2em] font-bold">Patrono da Educação Brasileira</p>
+</div>
+</div>
+</div>
+<!-- Moacir Gadotti -->
+<div class="space-y-10 lg:translate-y-16">
+<div class="w-24 h-1.5 bg-secondary/20 rounded-full"></div>
+<blockquote class="text-4xl lg:text-5xl font-headline italic font-light text-secondary leading-tight">
+                        "A sustentabilidade é um <span class="font-bold">novo paradigma</span> de civilização, que deve começar pela escola."
+                    </blockquote>
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 rounded-3xl bg-secondary-fixed overflow-hidden deep-diffuse-shadow">
+<img class="w-full h-full object-cover grayscale" data-alt="Moacir Gadotti" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIhzBdE3_MRnZyeEFCE8RaiWdrwH094CK7uS7hTGsqBjdfAv1Fwkqh5mjztnB57GltqcG91P140DVMdwEp7yOc4Ll90dRFgDhMzdxxGVUBhd4xka3sb5E_Yg2yI6TOFKB-SK0hwozmZO7j5P2PsN3bTLBKZxl2Ds70vWoBs1VV7TGRGw-r4__TQ4tdZrU9yP6zyta-WNnrn6VVu--cPmByejkM3JEdj-OMmbxR5k3cxOWOmOio14OOc6HEhCYDKNSSn9_1B9p2nHNt"/>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold text-secondary">Moacir Gadotti</h4>
+<p class="text-sm text-on-surface-variant uppercase tracking-[0.2em] font-bold">Educador e Ecopedagogo</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="bg-surface py-32 px-12">
+<div class="max-w-[1440px] mx-auto bg-surface-container-highest rounded-[3rem] p-16 md:p-24 shadow-2xl shadow-primary/5 flex flex-col lg:flex-row justify-between items-center gap-16 relative overflow-hidden">
+<div class="max-w-xl relative z-10 text-center lg:text-left">
+<h2 class="text-4xl lg:text-5xl font-headline font-bold text-primary mb-6">Cultive essa ideia conosco.</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed font-light">Receba atualizações sobre nossos projetos e metodologias que estão florescendo em comunidades de todo o país.</p>
+</div>
+<div class="w-full lg:w-auto relative z-10">
+<form class="flex flex-col sm:flex-row gap-4 p-2 bg-white rounded-full shadow-lg">
+<input class="px-8 py-5 rounded-full bg-transparent border-none focus:ring-0 w-full lg:w-96 text-lg" placeholder="Seu melhor e-mail" type="email"/>
+<button class="px-12 py-5 bg-primary text-white rounded-full font-bold text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">Participar</button>
+</form>
+</div>
+<!-- Decals -->
+<div class="absolute -left-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-emerald-950 w-full rounded-t-[3rem] mt-12 border-t border-surface-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-12 py-20 gap-16 w-full max-w-[1440px] mx-auto">
+<div class="flex flex-col gap-6 max-w-xs">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="eco">eco</span>
+<span class="text-2xl font-extrabold text-primary tracking-tight font-headline">Living Archive</span>
+</div>
+<p class="text-on-surface-variant text-base leading-relaxed">Promovendo a educação regenerativa através da arte, cultura e sustentabilidade participativa.</p>
+<p class="text-on-surface-variant/60 text-sm font-body">© 2024 The Living Archive. Rooted in Sustainability.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-16 lg:gap-32">
+<div class="flex flex-col gap-6">
+<span class="text-xs font-black uppercase tracking-widest text-primary">Explorar</span>
+<nav class="flex flex-col gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-base" href="#">Metodologia</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-base" href="#">Projetos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-base" href="#">Impacto</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<span class="text-xs font-black uppercase tracking-widest text-primary">Comunidade</span>
+<nav class="flex flex-col gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-base" href="#">Newsletter</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-base" href="#">Parceiros</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-base" href="#">Eventos</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<span class="text-xs font-black uppercase tracking-widest text-primary">Conectar</span>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="language">language</span>
+</button>
+<button class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="public">public</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

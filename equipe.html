@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f8f9fa",
+                    "surface": "#f8f9fa",
+                    "on-primary-container": "#a8e7c5",
+                    "inverse-primary": "#95d4b3",
+                    "on-tertiary-fixed": "#121f00",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#404943",
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary-fixed": "#002114",
+                    "background": "#f8f9fa",
+                    "surface-container-low": "#f3f4f5",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-background": "#191c1d",
+                    "secondary-container": "#67bafd",
+                    "inverse-on-surface": "#f0f1f2",
+                    "tertiary-container": "#456900",
+                    "primary-fixed": "#b1f0ce",
+                    "on-surface": "#191c1d",
+                    "tertiary-fixed-dim": "#9cd83e",
+                    "tertiary": "#334f00",
+                    "on-secondary-container": "#004972",
+                    "tertiary-fixed": "#b7f558",
+                    "on-tertiary-fixed-variant": "#324f00",
+                    "secondary-fixed": "#cde5ff",
+                    "outline-variant": "#bfc9c1",
+                    "primary": "#0f5238",
+                    "secondary": "#006399",
+                    "primary-container": "#2d6a4f",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-container": "#aeec50",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "outline": "#707973",
+                    "on-secondary-fixed-variant": "#004b74",
+                    "surface-variant": "#e1e3e4",
+                    "inverse-surface": "#2e3132",
+                    "surface-dim": "#d9dadb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "xxl": "2.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-line { border: none !important; }
+        .ultra-diffuse-shadow { box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.05), 0 20px 40px -15px rgba(0, 0, 0, 0.03); }
+        .glass-header { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+        .floating-nav { position: sticky; top: 1.5rem; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed antialiased">
+<!-- Desktop Navigation -->
+<div class="fixed top-0 w-full z-[100] px-6 py-6 pointer-events-none">
+<header class="max-w-7xl mx-auto glass-header bg-white/70 border-none rounded-full px-8 py-4 pointer-events-auto flex justify-between items-center ultra-diffuse-shadow">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-xl">eco</span>
+</div>
+<span class="text-xl font-bold text-primary font-headline tracking-tight">EcoAção</span>
+</div>
+                <nav class="hidden md:flex items-center gap-10 font-headline">
+                    <a class="text-on-surface/60 hover:text-primary transition-colors text-sm font-semibold" href="index.html">Início</a>
+                    <a class="text-on-surface/60 hover:text-primary transition-colors text-sm font-semibold" href="metodologia.html">Metodologia</a>
+                    <a class="text-on-surface/60 hover:text-primary transition-colors text-sm font-semibold" href="atividades.html">Atividades</a>
+                    <a class="text-on-surface/60 hover:text-primary transition-colors text-sm font-semibold" href="resultados.html">Resultados</a>
+                    <a class="text-primary font-bold text-sm relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full" href="equipe.html">Equipe</a>
+                    <a class="text-on-surface/60 hover:text-primary transition-colors text-sm font-semibold" href="dicas.html">Dicas</a>
+                </nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:flex bg-primary text-white px-6 py-2 rounded-full font-headline text-sm font-bold hover:scale-105 transition-transform">
+                Apoiar Projeto
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+</div>
+<main>
+<!-- Hero Section: Editorial Layout -->
+<section class="min-h-screen flex items-center pt-32 pb-20 px-6">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7 space-y-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary font-headline text-xs font-bold uppercase tracking-widest">
+                    Nosso Coletivo
+                </div>
+<h1 class="font-headline font-extrabold text-6xl lg:text-[clamp(3.5rem,8vw,5.5rem)] text-on-surface leading-[1] tracking-tight">
+                    As mãos por trás <br/>do <span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent italic">projeto</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant/80 leading-relaxed max-w-2xl font-body font-light">
+                    O EcoAção é movido pela convicção de que a sustentabilidade começa na infância. Somos um coletivo multidisciplinar focado em cultivar um futuro mais verde.
+                </p>
+<div class="flex flex-wrap gap-6 pt-4">
+<button class="bg-primary text-white px-10 py-5 rounded-2xl font-headline font-bold text-lg ultra-diffuse-shadow hover:-translate-y-1 transition-all flex items-center gap-3">
+                        Nossa Metodologia
+                        <span class="material-symbols-outlined">north_east</span>
+</button>
+<div class="flex -space-x-4 items-center">
+<div class="w-12 h-12 rounded-full border-4 border-white overflow-hidden bg-slate-200">
+<img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcKjUx8RDdjap7j6KvsoOmugYxXfDg8nyIoMkP4oWX1mI7JM0bE8l8iPXzqQRzEse1imh8h-NT-L7ofZBus0ZEJHFLrPp6lZliqnpnvyVSBVvuH4jNUZEHioSfySyyFL_Hy5rDLxSLtPJusgEMiKgFvSPAjin1t3zt8qW9TWzBnKqkvt0TzLwiiCNPLujCjnFZ-8_Bj-voHGHWhHxGIyPMBc2dto3VLwXGLV-bTnz0axvGLwSEVfaZ_oKG4i2tR3aWYoGgRAG6fbZA"/>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-white overflow-hidden bg-slate-200">
+<img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnb0evXKJ44wfww5RzuHXvmS6nAJGa5P8XXNHldDajStz6Pgm6AcIcPhLgmc7StdAn93KIEQHXqBBFAE4NfsI-xWgXj6IrMdK_gP3TPzzOo8PSWzdzIWmJUABUcVNek5dz2eEiY_v1kDTb1zIq9Ln-AwMu-HdTAH12PELZBOBOLg-E_x4R3PC2Q1E69lv_d6cXDY7Wv2Ulg2T1QXGMoIbv5Fh-bnYde_D0GKwTJaK1iXVwZq17PmDir94TQtKDGvP3vXd7ehoz6MaG"/>
+</div>
+<div class="pl-6 text-sm font-bold text-on-surface/60">+ Equipe Completa</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="w-full aspect-[4/5] rounded-[3rem] overflow-hidden ultra-diffuse-shadow relative z-10 group">
+<img alt="Environmental education" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8eQObElewd_wluqHF4izgoHLA8-jWFwJqopKdhRQ1kBNjzQgnLevyxZlnwC7OkCEakcH9_7Csgwiz6NOYlOuPo4Y0_8kGjU7Ou58IRgUe-RIBK-hcrKfiDUuKjl7gLB8jNlb2C1PAxcix2h3IgZ1y3-Ymr5sQblilnlt0OsOerdMTR-6VbFmJWhExeb_iyvAXlWfC_952IyNRUAM-0kschXUlAnV7X6IfSh91fI_l9mKT0rmCCxQdZeM9fws3X-5CWxUoyX9pWgVh"/>
+</div>
+<!-- Abstract blobs for separation -->
+<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -z-10"></div>
+<div class="absolute -top-12 -right-12 w-80 h-80 bg-secondary/10 rounded-full blur-[120px] -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Values: Asymmetric Layout -->
+<section class="py-32 bg-white/40">
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-20 items-center">
+<div class="lg:col-span-6 grid grid-cols-2 gap-6 relative">
+<div class="space-y-6">
+<div class="h-[400px] rounded-[2.5rem] overflow-hidden ultra-diffuse-shadow">
+<img alt="Nature play" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANwex-8hA7RACbY6oH78aFHP0cSp6-YoY26ItIu5t3M51amXPe8-VN4xhPcbXKBrHOTFd5OUfgDlwIyLzgCsJoZGT-XvPfZ3oEqH8mCLn0Rwog4tQGV4DcVz3wU4qUvKc3QocFm4InoBCNPRNdb5dwpml9adYuTYmefL5yoKD4Vjbn2ZWV6uojqwWBKnJOt6j9od4D9ty5xzG9uJcYzw_vee6zXR0BFx3pF_NZZnlFsEKllsxaKomCpASYil3i07WJFE8RXEJvAGLz"/>
+</div>
+<div class="bg-secondary-container/30 p-10 rounded-[2.5rem] ultra-diffuse-shadow">
+<h3 class="font-headline font-extrabold text-2xl mb-3 text-secondary">Socialmente Responsável</h3>
+<p class="text-sm text-secondary/80 leading-relaxed font-medium">Impactando comunidades através do conhecimento compartilhado e inclusão ativa.</p>
+</div>
+</div>
+<div class="space-y-6 pt-16">
+<div class="bg-tertiary-fixed/30 p-10 rounded-[2.5rem] ultra-diffuse-shadow">
+<h3 class="font-headline font-extrabold text-2xl mb-3 text-tertiary">Sustentabilidade Viva</h3>
+<p class="text-sm text-tertiary/80 leading-relaxed font-medium">Práticas reais que transformam o cotidiano escolar em laboratórios de vida.</p>
+</div>
+<div class="h-[440px] rounded-[2.5rem] overflow-hidden ultra-diffuse-shadow">
+<img alt="Eco tools" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8n34_pGcmxpTBBy0uXpp95aNVzThelXfzkZ7yi2rWI9beBNzxGVrZo-GmrsbnddYuUEqmIMyLRDtpjpyX9LjhRuQgXa6wGcopwP767bscRN-yQJz5_uTEQaWJndlDqJ2cJRWgRqN7uy9NvTofGavtSSj9blWraq8LACK3z9LmJE_9dOzKUylFM3n4vZN_Bvsaa2xyNAtrekIxAWaF5yP7b3V4mMll2-zetjZVpBRFJjpgCdT3DsrczbPITZBfvIyCOr5urGU3QD1G"/>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 space-y-12">
+<div class="w-16 h-1 bg-primary/20 rounded-full"></div>
+<h2 class="font-headline font-extrabold text-5xl text-on-surface leading-tight">Missão &amp; Valores</h2>
+<div class="space-y-8 text-xl text-on-surface-variant font-body leading-relaxed font-light">
+<p>
+                        Nossa jornada não é apenas sobre ensinar a reciclar, mas sobre reconectar o ser humano com o seu habitat natural desde os primeiros passos. Acreditamos na <strong class="text-primary font-bold">educação regenerativa</strong>.
+                    </p>
+<p class="p-10 bg-primary/5 rounded-[2.5rem] border-l-8 border-primary italic text-primary/80 relative">
+                        "Atuamos com transparência, responsabilidade social e uma visão centrada no aluno, garantindo que cada atividade seja um convite à descoberta."
+                    </p>
+</div>
+<button class="text-primary font-headline font-bold text-lg flex items-center gap-2 hover:gap-4 transition-all group">
+                    Descubra nossa visão completa
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">trending_flat</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Team Mural: Expansive Grid -->
+<section class="py-40 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-6xl font-headline font-extrabold text-on-surface mb-6">Mural da Equipe</h2>
+<p class="text-xl text-on-surface-variant/70 font-light">Mentes brilhantes unidas por um único propósito: a conscientização ambiental das novas gerações.</p>
+</div>
+<div class="text-on-surface/30 font-headline font-black text-8xl hidden lg:block select-none opacity-20">COLETIVO</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-16">
+<!-- Thais -->
+<div class="group">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 ultra-diffuse-shadow bg-surface-container-low">
+<div class="absolute top-5 left-5 z-20 px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-black rounded-full uppercase tracking-[0.2em]">Liderança</div>
+<img alt="Thais" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcKjUx8RDdjap7j6KvsoOmugYxXfDg8nyIoMkP4oWX1mI7JM0bE8l8iPXzqQRzEse1imh8h-NT-L7ofZBus0ZEJHFLrPp6lZliqnpnvyVSBVvuH4jNUZEHioSfySyyFL_Hy5rDLxSLtPJusgEMiKgFvSPAjin1t3zt8qW9TWzBnKqkvt0TzLwiiCNPLujCjnFZ-8_Bj-voHGHWhHxGIyPMBc2dto3VLwXGLV-bTnz0axvGLwSEVfaZ_oKG4i2tR3aWYoGgRAG6fbZA"/>
+</div>
+<h3 class="font-headline font-extrabold text-2xl text-on-surface group-hover:text-primary transition-colors">Thais</h3>
+<p class="font-body text-on-surface-variant font-medium tracking-wide">Coordenação Geral</p>
+</div>
+<!-- Isabela -->
+<div class="group pt-12">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 ultra-diffuse-shadow bg-surface-container-low">
+<div class="absolute top-5 left-5 z-20 px-4 py-1.5 bg-secondary-container text-white text-[10px] font-black rounded-full uppercase tracking-[0.2em]">Estratégia</div>
+<img alt="Isabela" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnb0evXKJ44wfww5RzuHXvmS6nAJGa5P8XXNHldDajStz6Pgm6AcIcPhLgmc7StdAn93KIEQHXqBBFAE4NfsI-xWgXj6IrMdK_gP3TPzzOo8PSWzdzIWmJUABUcVNek5dz2eEiY_v1kDTb1zIq9Ln-AwMu-HdTAH12PELZBOBOLg-E_x4R3PC2Q1E69lv_d6cXDY7Wv2Ulg2T1QXGMoIbv5Fh-bnYde_D0GKwTJaK1iXVwZq17PmDir94TQtKDGvP3vXd7ehoz6MaG"/>
+</div>
+<h3 class="font-headline font-extrabold text-2xl text-on-surface group-hover:text-secondary transition-colors">Isabela</h3>
+<p class="font-body text-on-surface-variant font-medium tracking-wide">Vice-Liderança</p>
+</div>
+<!-- Renata -->
+<div class="group">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 ultra-diffuse-shadow bg-surface-container-low">
+<img alt="Renata" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1aO0Bb3U1vHhd0Rjy8pW77iusH82Ti4QgTuEUbD-6uRQwRc5KWceWI1AQpNtD35daodzIrui2WjVCFPGHdPNmOkpwVLhrJr8LGjM2uCl53gkh0BdNC2Ckq59gaVMIVObi_OMfXwyDFphKKuFRvZBi3euCX1SwBwkJgZvFws87NP-yLR8kmvuD0fGkeG7gxfewwr8NBLpdvQm1HCGD2Sk22qqVIbXlkIa7nCXOINPjY16BkTPdpfmy59PouoqJoWF9zGLwyMIrimZc"/>
+</div>
+<h3 class="font-headline font-extrabold text-2xl text-on-surface transition-colors">Renata</h3>
+<p class="font-body text-on-surface-variant font-medium tracking-wide">Planejamento</p>
+</div>
+<!-- Emilly -->
+<div class="group pt-12">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 ultra-diffuse-shadow bg-surface-container-low">
+<img alt="Emilly" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3uvaavLT25M8eyZkpS_UGz_Jl7y6AE9dW8Aj9vTbQY1jStZXigbcHk1WQhAXYw_hXye04rkP9F_fQcdME2v9rGYTjobBTbGoBawKPYad-Xu3JVfGDh5AvM5_yKBD3dsxeol4k2PStWHTVIDTdyCryGvy1oEIGGbYcffHdkyVZgHYHl3mgms9DRINCNJbIL4hj81raiW2_CmeBq28_ykWC072r4b-HkGoez2AVgT5yBlkbHjggd0-mC5ntpPBdOYGBoGamlctA33NM"/>
+</div>
+<h3 class="font-headline font-extrabold text-2xl text-on-surface transition-colors">Emilly</h3>
+<p class="font-body text-on-surface-variant font-medium tracking-wide">Sistemas</p>
+</div>
+<!-- Second Row -->
+<div class="group">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 ultra-diffuse-shadow bg-surface-container-low">
+<img alt="Livia" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwvz618FIJkYQFp4QozgoWCeqAZ_CAV3A4yvzP-03tmw0yPjiklt_62GKBYVh0T44HSKUER2XslEJ4FwDAs9c58V6Ft4oi5IBN2fJyXiSCxA0FBcijBqbkh9mFnEopXsLBCYYkPBKpQV6ffRCy3SdslWZ9_Ai05hAPb-pntAtiHhU0sWS-5SxLbNhHv6z6NsD6kVK2t3VYUdjleD0HufogG7XJUtav4niySUGkPb13qqeTmJ8SL1iNekCh4X-1yyCDUFa5NYpN-GOF"/>
+</div>
+<h3 class="font-headline font-extrabold text-2xl text-on-surface transition-colors">Livia</h3>
+<p class="font-body text-on-surface-variant font-medium tracking-wide">Educação</p>
+</div>
+<div class="group pt-12">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 ultra-diffuse-shadow bg-surface-container-low">
+<img alt="Caleane" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjrLwkre_rXiEdmdAPstu4-NavonWp9CPZHqZMIf_6g_iwyAS6OlA784mPuYj5YIqcfSGq5k51sfNMtWZ-Ssz1FcWcrd6x5bfeJpS9lOYu0SwhTnoznlcsGc9Ion-VUpTDbB-yDJU-196KZFtdaOYrppljLdIb-QYvjDmE5pKVWHiiCAIAsjZvdD_Qrl8Z9lCzejpflqxxwuZtQmm8oDttJJaAzurLtZzCPlDE_wC9KxkK0ywjd1p6v80GTakiLMG04ZA9JbkxFjm"/>
+</div>
+<h3 class="font-headline font-extrabold text-2xl text-on-surface transition-colors">Caleane</h3>
+<p class="font-body text-on-surface-variant font-medium tracking-wide">Comunicação</p>
+</div>
+<div class="group">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 ultra-diffuse-shadow bg-surface-container-low">
+<img alt="Macio" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzhXHS83nG9EZ2tKpKlFFXO1eWezJrytdCjvNEUupxOJ-t3ydnGS0Q1aSXm6ah46YoNMbl1yEmoyVFKztCCIjr9HFUUbV7exrJj6ECP0DAatcD8JEEAYroARB4YTXbW2JJOyMz1kQhGzw7U55X2bkPm1CkaFqbY-XLokkJ42PUpgAgpYIDudN4moxAmXzQF_-azovR8qh1D4_OzQkpzq09Yvq7jM6VMaoH_Luei2Me7SCKgWBBXO1EtcUXJ7lJb0SMpziBIHAhcYks"/>
+</div>
+<h3 class="font-headline font-extrabold text-2xl text-on-surface transition-colors">Macio</h3>
+<p class="font-body text-on-surface-variant font-medium tracking-wide">Sustentabilidade</p>
+</div>
+<div class="group pt-12">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 ultra-diffuse-shadow bg-surface-container-low">
+<img alt="Natan" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCAyXgN5NLyTArKtUL2K2X69ZGPXau4iJqZ-_AyqvZe9Q3jwlXA-1ms5XEnuKNOVKjd_bkm_nGB-x-hygvWZsjVd3hQhDDLtMPSmMjeWtwLLMRxAYjra64anOHNBvwZeLqVkx0QDz9gfeOuj9E8YrnSevfKDaKm0lWqsuqqaBwku8486k-fS1nBOLplyl51mTGRDB01pvtjwwFuKGApYtxktPLlOsAAoNEtjk5x1OWF42d1lIlyxMNdYaWiJhT589ScboxJqDpfq5g"/>
+</div>
+<h3 class="font-headline font-extrabold text-2xl text-on-surface transition-colors">Natan</h3>
+<p class="font-body text-on-surface-variant font-medium tracking-wide">Avaliação</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Methodology Teaser -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="bg-primary-container rounded-[4rem] p-16 md:p-24 overflow-hidden relative ultra-diffuse-shadow">
+<div class="relative z-10 grid lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-10">
+<h2 class="font-headline font-extrabold text-5xl md:text-6xl text-white leading-tight">Um compromisso com as próximas gerações.</h2>
+<p class="text-white/70 font-body text-xl leading-relaxed font-light">
+                        Nossa equipe trabalha incansavelmente para criar ferramentas que não apenas educam, mas inspiram mudanças reais no comportamento social e ambiental.
+                    </p>
+<a class="inline-flex items-center gap-4 text-tertiary-fixed font-headline font-bold text-lg hover:gap-6 transition-all group" href="#">
+                        Saiba mais sobre nossa história
+                        <span class="material-symbols-outlined text-2xl group-hover:scale-125 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+<div class="flex justify-center lg:justify-end">
+<div class="w-80 h-80 md:w-[450px] md:h-[450px] rounded-full border-[20px] border-white/5 p-8 flex items-center justify-center animate-pulse">
+<div class="w-full h-full rounded-full bg-white/10 backdrop-blur-3xl flex items-center justify-center">
+<span class="material-symbols-outlined text-[10rem] text-on-primary-container opacity-40" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Organic shapes for background depth -->
+<div class="absolute -right-40 -bottom-40 w-[600px] h-[600px] bg-primary blur-[150px] opacity-30 rounded-full"></div>
+<div class="absolute -left-20 -top-20 w-[400px] h-[400px] bg-secondary blur-[120px] opacity-20 rounded-full"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-40 bg-surface-container-low border-t border-on-surface/5">
+<div class="max-w-7xl mx-auto px-6 py-24 flex flex-col md:flex-row justify-between items-start gap-16">
+<div class="space-y-6 max-w-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-lg">eco</span>
+</div>
+<span class="text-xl font-bold text-primary font-headline">EcoAção</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Cultivando consciência ambiental e ferramentas pedagógicas inovadoras para as futuras gerações. Juntos por um mundo mais verde.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12 lg:gap-24">
+<div class="space-y-6">
+<h4 class="font-headline font-bold text-sm uppercase tracking-widest text-on-surface/40">Plataforma</h4>
+<div class="flex flex-col gap-4 font-body text-on-surface/60">
+<a class="hover:text-primary transition-colors" href="index.html">Início</a>
+<a class="hover:text-primary transition-colors" href="metodologia.html">Metodologia</a>
+<a class="hover:text-primary transition-colors" href="atividades.html">Atividades</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline font-bold text-sm uppercase tracking-widest text-on-surface/40">Recursos</h4>
+<div class="flex flex-col gap-4 font-body text-on-surface/60">
+<a class="hover:text-primary transition-colors" href="resultados.html">Resultados</a>
+<a class="hover:text-primary transition-colors" href="equipe.html">Equipe</a>
+<a class="hover:text-primary transition-colors" href="dicas.html">Contato</a>
+</div>
+</div>
+<div class="space-y-6 col-span-2 md:col-span-1">
+<h4 class="font-headline font-bold text-sm uppercase tracking-widest text-on-surface/40">Redes</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white ultra-diffuse-shadow flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-12 border-t border-on-surface/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-on-surface-variant/60 text-sm">© 2024 Projeto EcoAção - Consciência Ambiental na Infância.</p>
+<div class="flex gap-8 text-sm text-on-surface-variant/60">
+<a class="hover:text-primary underline-offset-4 hover:underline" href="#">Privacidade</a>
+<a class="hover:text-primary underline-offset-4 hover:underline" href="#">Termos</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav (kept for UX, styled better) -->
+<!-- Mobile navigation removed for consistency with other pages -->
+</body></html>

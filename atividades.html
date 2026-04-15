@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>O Arquivo Vivo - Consciência Ambiental</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#004b74",
+                    "background": "#fbfcfd",
+                    "surface-dim": "#d9dadb",
+                    "secondary-fixed": "#cde5ff",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#95d4b3",
+                    "surface-container-high": "#e7e8e9",
+                    "secondary-container": "#67bafd",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#121f00",
+                    "surface-variant": "#e1e3e4",
+                    "secondary": "#006399",
+                    "on-primary-fixed-variant": "#0e5138",
+                    "outline": "#707973",
+                    "tertiary-fixed": "#b7f558",
+                    "on-secondary-container": "#004972",
+                    "outline-variant": "#bfc9c1",
+                    "on-background": "#191c1d",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-container": "#edeeef",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#a8e7c5",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-bright": "#fbfcfd",
+                    "primary-fixed": "#b1f0ce",
+                    "tertiary-fixed-dim": "#9cd83e",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#2d6a4f",
+                    "secondary-fixed-dim": "#94ccff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#334f00",
+                    "primary-fixed-dim": "#95d4b3",
+                    "on-primary-fixed": "#002114",
+                    "on-surface-variant": "#404943",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#001d32",
+                    "on-tertiary-fixed-variant": "#324f00",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-surface": "#191c1d",
+                    "primary": "#0f5238",
+                    "surface-tint": "#2c694e",
+                    "on-tertiary-container": "#aeec50",
+                    "surface": "#fbfcfd",
+                    "inverse-surface": "#2e3132",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#456900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        .shadow-ambient {
+            box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.08);
+        }
+        .shadow-hover {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .shadow-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.12);
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #fbfcfd;
+            color: #191c1d;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+<!-- Desktop Navigation -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-7xl glass-nav rounded-2xl flex justify-between items-center px-8 py-4 shadow-ambient">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-xl text-white">
+<span class="material-symbols-outlined block" data-icon="eco">eco</span>
+</div>
+<span class="text-xl font-extrabold text-emerald-950 dark:text-emerald-50 tracking-tighter">O Arquivo Vivo</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="metodologia.html">Metodologia</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="atividades.html">Atividades</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="resultados.html">Resultados</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="equipe.html">Equipe</a>
+<a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="dicas.html">Dicas</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2.5 rounded-xl hover:bg-black/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+</button>
+<button class="hidden sm:flex items-center gap-2 bg-emerald-950 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-emerald-900/10 hover:opacity-90 transition-opacity">
+                Minha Conta
+            </button>
+</div>
+</header>
+<main class="pt-40 px-6 max-w-7xl mx-auto">
+<!-- Header Section -->
+<section class="mb-20 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase tracking-widest mb-4">Catálogo 2024</span>
+<h1 class="text-5xl md:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-6">
+                    Exploração <span class="text-primary italic">Creativa</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                    Descubra oficinas desenhadas para reconectar gerações com a sabedoria da terra e a preservação do meio ambiente.
+                </p>
+</div>
+<div class="flex-shrink-0 w-full md:w-80">
+<div class="relative group">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline" data-icon="filter_list">filter_list</span>
+<input class="w-full bg-white border-none rounded-2xl py-5 pl-12 pr-4 text-on-surface shadow-ambient focus:ring-2 focus:ring-primary/20 placeholder:text-outline/60 transition-all" placeholder="Filtrar por tema..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Asymmetric Grid Catalog -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-32">
+<!-- Card 1: Contação de Histórias -->
+<article class="md:col-span-8 bg-surface-container-lowest rounded-[2rem] shadow-ambient overflow-hidden flex flex-col md:flex-row shadow-hover group">
+<div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
+<img alt="Contação de Histórias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Children sitting in a circle listening to a storyteller in a library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt7kTkHIy-l-CoiP5s8PIRwRYqjUEsqqiSXWGmjPBJGs8Xj-EVWeGc_W497nfkIXrJKLSETRI0Z-XHh51R2oedmILySB4vIgyQIKV_N3GkLb1kL3AkMuERCqr7_XkRtWZlxPP4i2qBm9GShAZZ3NYErcnHxEjrRI3VuwJgEQWFJzPbZxHQKV_7_-0d8qxvicw4uWZFbJr1Ys8qssUzGo6IIt67CUxDuanaZOACvrQv7Xzbm0yP0O9UHGeNl0f__zZMuFh5x6oMwpAg"/>
+</div>
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<div class="bg-tertiary-fixed text-on-tertiary-fixed self-start px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest mb-6">Lúdico</div>
+<h3 class="text-2xl font-extrabold text-on-surface mb-4 leading-tight">Contação de Histórias</h3>
+<p class="text-on-surface-variant leading-relaxed text-md">Narrativas ancestrais sobre a preservação do solo e das águas através da imaginação guiada.</p>
+</div>
+</article>
+<!-- Card 2: Jogos Educativos -->
+<article class="md:col-span-4 bg-surface-container-lowest rounded-[2rem] shadow-ambient overflow-hidden flex flex-col shadow-hover group">
+<div class="h-64 overflow-hidden relative">
+<div class="absolute top-4 right-4 z-10 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest">Social</div>
+<img alt="Jogos Educativos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Two children playing a handmade educational board game" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDB3RzawpiSBsezNFJWrjzLMdxQxuMKKA7wUIf-RE_H73WfjYJtLHIhdETGYeFgwZLWWjAoDfRouonzSm5EYnjkt7WZLBJttyUeOGr9HigbsJUZE2dOcIxJ0YP3xxNCU2xKVfSmsk8IrDtZuLhBLBy8WaeWVvoIi-bx7eM5BwuTFUnfkBvI9ZyOUugODs47Pg-0o42g4T1Z6k3tLDPNucnaoml_V8o4br-b8IVz614oYpPVVlqHlUaDMZMxmgc3iptVYByZBC-W7IO"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-extrabold text-on-surface mb-3">Jogos Educativos</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Gamificação focada em sustentabilidade para aprender rindo e compartilhando vitórias coletivas.</p>
+</div>
+</article>
+<!-- Card 3: Produção com Recicláveis -->
+<article class="md:col-span-4 bg-surface-container-lowest rounded-[2rem] shadow-ambient overflow-hidden flex flex-col shadow-hover group">
+<div class="h-64 overflow-hidden relative">
+<div class="absolute top-4 right-4 z-10 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest">Oficina</div>
+<img alt="Produção com Recicláveis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Hands crafting small plant pots from recycled plastic bottles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTgHWBriW93jb-zOn4arz5aUxLeADbtfU6OYPxztxNsjq46z2akhe9V9ipoYtIQbft91Fxo0YkmzndyElZM3dHaoTq1MTyiF9xHIsodZkrjap1R6jmbCK_YBawS0dPAG_hBSISL42_5FG4yPuj4evsLjJa6GfifdqMQDGf0gPLKp86pvVbB4gZdf99x1mqMzmE-y5tpChXXQJy0mMxeG__QxmV-MPUy1tXaKVQh9UZktRVoApQ3YKssSeBk7MBlut80qgyc6Hs5a9V"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-extrabold text-on-surface mb-3">Produção com Recicláveis</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Transformando o descartado em arte e utilitários, exercitando um novo olhar circular sobre o consumo.</p>
+</div>
+</article>
+<!-- Card 4: Atividades de Plantio -->
+<article class="md:col-span-8 bg-surface-container-lowest rounded-[2rem] shadow-ambient overflow-hidden flex flex-col md:flex-row-reverse shadow-hover group">
+<div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
+<img alt="Atividades de Plantio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of small green saplings being planted" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8iaFyXml_cAHi-VIFuvgCMNi46haYWgyb9LwHdAY4DkAeSidvhuUWK9GKkP7irE_N4PARVuT-krc1YmTdLM3qwOsHGg-Vneqevpc34KF6FJ6p6g64AIWlJLInYDTzqJSO-X8FYXzmNpW8pjmqDWbPNOe87l4QtwxSAerN7DmgnPQCyPHQ9jo3s9soycYVkxn1E3a0fcu8_sgf2dRMnRe_lkdpDKSMuGyVmnCc3JwAHcvwx5NPDsn0WaMLfyoT3zYEEHvZQjZpYHuV"/>
+</div>
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<div class="bg-tertiary-fixed text-on-tertiary-fixed self-start px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest mb-6">Terra</div>
+<h3 class="text-2xl font-extrabold text-on-surface mb-4 leading-tight">Atividades de Plantio</h3>
+<p class="text-on-surface-variant leading-relaxed text-md">Conexão visceral com a terra: semear o futuro através de hortaliças e flores polinizadoras.</p>
+</div>
+</article>
+<!-- Card 5: Rodas de Conversa -->
+<article class="md:col-span-12 bg-surface-container-lowest rounded-[2rem] shadow-ambient overflow-hidden flex flex-col md:flex-row shadow-hover group">
+<div class="md:w-3/5 h-80 md:h-[450px] overflow-hidden relative">
+<div class="absolute top-6 left-6 z-10 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-widest">Memória</div>
+<img alt="Rodas de Conversa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="Group of diverse people sitting in a sunlit garden circle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEouKgBXUiTc_OYrjO57jFPTqPaSq_KxdboTk_DEsotoDlsFJtGmlj3HE5ky-x46jhX-hJX-qAalMtnAyHDuiSBVTilFK87kCYCQrxPJOByhvrPeJ6iRsF2X0bqdzt_5P97KBr7VF2xHdflZR7tKwLKAIJ1_mL-A3qD9HMZ1T4ysAukSR08709zdJT2U2symUbpq7qrlptAVAcXIRK8vQJGNHZ-o5dXvfVlgGrkRNDiwI0qKLAMcGdqgKYoYULe6vWn5XJbSElenzD"/>
+</div>
+<div class="md:w-2/5 p-12 flex flex-col justify-center">
+<h3 class="text-3xl font-extrabold text-on-surface mb-6 leading-tight">Rodas de Conversa</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-8">Encontros intergeracionais desenhados para a troca de saberes sobre plantas medicinais e tradições locais de cuidado com o ecossistema.</p>
+<a class="flex items-center gap-2 text-primary font-bold hover:underline" href="#">
+                        Saiba mais sobre o projeto
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+<!-- CTA Section -->
+<section class="mb-32">
+<div class="bg-[#102a21] rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
+<div class="relative z-10 md:max-w-xl">
+<h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-[1.1] tracking-tight">Junte-se ao Nosso Arquivo Vivo</h2>
+<p class="text-emerald-100/70 text-lg md:text-xl leading-relaxed">
+                        Convidamos famílias, crianças e idosos para semear novas histórias e colher um futuro mais consciente em nossa comunidade.
+                    </p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row gap-5 w-full md:w-auto">
+<button class="bg-primary text-white font-bold py-5 px-10 rounded-2xl shadow-2xl shadow-primary/40 hover:scale-105 active:scale-95 transition-all duration-300 text-lg">
+                        Inscrever minha Família
+                    </button>
+<button class="bg-white/10 backdrop-blur-md text-white font-bold py-5 px-10 rounded-2xl hover:bg-white/20 transition-all text-lg">
+                        Ver Calendário
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-white pt-20 pb-12 px-8 border-t border-slate-100">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16">
+<div class="flex flex-col gap-6 max-w-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="eco">eco</span>
+<span class="text-xl font-extrabold text-emerald-950 tracking-tighter">O Arquivo Vivo</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                    Um ecossistema de aprendizado compartilhado onde cada ação conta para a regeneração do nosso planeta.
+                </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<span class="font-bold text-xs uppercase tracking-widest text-primary">Plataforma</span>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Oficinas</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Calendário</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Projetos</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-xs uppercase tracking-widest text-primary">Sobre</span>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Metodologia</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Impacto</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Contato</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-xs uppercase tracking-widest text-primary">Legal</span>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Privacidade</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Termos</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium">
+<p>© 2024 Consciência Ambiental - O Arquivo Vivo. Todos os direitos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">YouTube</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav (Shown only on small screens) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white/90 backdrop-blur-xl border-t border-slate-100 md:hidden">
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold mt-1 uppercase tracking-tighter">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary p-2" href="#">
+<span class="material-symbols-outlined" data-icon="palette" style="font-variation-settings: 'FILL' 1;">palette</span>
+<span class="text-[10px] font-bold mt-1 uppercase tracking-tighter">Oficinas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined" data-icon="auto_graph">auto_graph</span>
+<span class="text-[10px] font-bold mt-1 uppercase tracking-tighter">Status</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold mt-1 uppercase tracking-tighter">Perfil</span>
+</a>
+</nav>
+</body></html>
