@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebase';
 
 const Methodology = () => {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState(''); // 'loading', 'success', 'error', ''
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setStatus('loading');
+    try {
+      await addDoc(collection(db, 'newsletter'), {
+        email,
+        timestamp: new Date()
+      });
+      setStatus('success');
+      setEmail('');
+      setTimeout(() => setStatus(''), 3000);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      setStatus('error');
+    }
+  };
+
   const steps = [
     { id: '01', title: 'Diagnóstico', desc: 'Levantamento profundo de hábitos e escuta ativa da comunidade para entender as dores e potenciais locais.', color: 'bg-primary-fixed text-on-primary-fixed', tag: 'Análise' },
     { id: '02', title: 'Planejamento', desc: 'Organização de oficinas colaborativas onde cada voz é ouvida, desenhando soluções em conjunto.', color: 'bg-secondary-fixed text-on-secondary-fixed', tag: 'Estratégia' },
@@ -146,14 +170,25 @@ const Methodology = () => {
             <div className="max-w-2xl relative z-10">
               <h2 className="text-4xl md:text-6xl font-headline font-bold mb-8 tracking-tight">Cultive essa ideia <br /> conosco.</h2>
               <p className="text-base md:text-xl opacity-80 leading-relaxed font-light mb-12 max-w-lg">Receba atualizações sobre projetos que estão florescendo em comunidades locais.</p>
-              <form className="flex flex-col sm:flex-row gap-4 max-w-xl" onSubmit={(e) => e.preventDefault()}>
+              <form className="flex flex-col sm:flex-row gap-4 max-w-xl" onSubmit={handleSubscribe}>
                 <input 
                   className="px-8 py-5 rounded-2xl bg-white/10 border border-white/20 text-white placeholder:text-white/40 w-full outline-none focus:bg-white/20 transition-all font-medium" 
                   placeholder="Seu melhor e-mail" 
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
-                <button className="px-10 py-5 bg-surface text-primary rounded-2xl font-black hover:scale-105 active:scale-95 transition-all shadow-2xl">Participar</button>
+                <button 
+                  type="submit" 
+                  className="px-10 py-5 bg-surface text-primary rounded-2xl font-black hover:scale-105 active:scale-95 transition-all shadow-2xl disabled:opacity-50"
+                  disabled={status === 'loading'}
+                >
+                  {status === 'loading' ? 'Enviando...' : 'Participar'}
+                </button>
               </form>
+              {status === 'success' && <p className="mt-4 text-sm font-bold text-tertiary-fixed">Email cadastrado com sucesso!</p>}
+              {status === 'error' && <p className="mt-4 text-sm font-bold text-error">Erro ao cadastrar. Tente novamente.</p>}
             </div>
             <div className="absolute top-0 right-0 w-96 h-96 bg-tertiary-fixed/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
           </div>

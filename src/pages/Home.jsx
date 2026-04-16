@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebase';
 
 const Home = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('');
+
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) return;
+
+    setStatus('loading');
+    try {
+      await addDoc(collection(db, 'contacts'), {
+        ...formData,
+        timestamp: new Date()
+      });
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus(''), 3000);
+    } catch (error) {
+      console.error("Error adding contact: ", error);
+      setStatus('error');
+    }
+  };
+
   return (
     <>
       <Hero />
@@ -258,24 +282,51 @@ const Home = () => {
           <div className="bg-surface-container-lowest rounded-[2.5rem] lg:rounded-[4rem] shadow-xl overflow-hidden grid lg:grid-cols-2">
             <div className="p-8 md:p-12 lg:p-20">
               <h2 className="text-3xl md:text-4xl font-extrabold font-headline mb-8 text-on-surface">Vamos Conversar?</h2>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleContactSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-widest mb-3 text-on-surface-variant">Nome Completo</label>
-                    <input className="w-full bg-surface-container-low border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary/20 transition-all outline-none" type="text" placeholder="Seu nome"/>
+                    <input 
+                      className="w-full bg-surface-container-low border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary/20 transition-all outline-none" 
+                      type="text" 
+                      placeholder="Seu nome"
+                      value={formData.name}
+                      onChange={e => setFormData({...formData, name: e.target.value})}
+                      required
+                    />
                   </div>
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-widest mb-3 text-on-surface-variant">Email</label>
-                    <input className="w-full bg-surface-container-low border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary/20 transition-all outline-none" type="email" placeholder="email@exemplo.com"/>
+                    <input 
+                      className="w-full bg-surface-container-low border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary/20 transition-all outline-none" 
+                      type="email" 
+                      placeholder="email@exemplo.com"
+                      value={formData.email}
+                      onChange={e => setFormData({...formData, email: e.target.value})}
+                      required
+                    />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-widest mb-3 text-on-surface-variant">Mensagem</label>
-                  <textarea className="w-full bg-surface-container-low border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none" rows="4" placeholder="Como podemos ajudar?"></textarea>
+                  <textarea 
+                    className="w-full bg-surface-container-low border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none" 
+                    rows="4" 
+                    placeholder="Como podemos ajudar?"
+                    value={formData.message}
+                    onChange={e => setFormData({...formData, message: e.target.value})}
+                    required
+                  ></textarea>
                 </div>
-                <button className="w-full hero-gradient text-white font-bold py-5 rounded-2xl shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all text-lg">
-                  Enviar Mensagem
+                <button 
+                  type="submit"
+                  className="w-full hero-gradient text-white font-bold py-5 rounded-2xl shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all text-lg disabled:opacity-50"
+                  disabled={status === 'loading'}
+                >
+                  {status === 'loading' ? 'Enviando...' : 'Enviar Mensagem'}
                 </button>
+                {status === 'success' && <p className="mt-4 text-center text-sm font-bold text-tertiary-fixed">Mensagem enviada com sucesso!</p>}
+                {status === 'error' && <p className="mt-4 text-center text-sm font-bold text-error">Erro ao enviar mensagem. Tente novamente.</p>}
               </form>
             </div>
             <div className="bg-[#052216] p-8 md:p-12 lg:p-20 text-white flex flex-col justify-between relative overflow-hidden">
