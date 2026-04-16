@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consciência Ambiental na Infância</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f8f9fa",
+                        "inverse-primary": "#95d4b3",
+                        "surface-container": "#edeeef",
+                        "on-secondary-fixed": "#001d32",
+                        "secondary-fixed-dim": "#94ccff",
+                        "outline-variant": "#bfc9c1",
+                        "tertiary-container": "#456900",
+                        "on-secondary-container": "#004972",
+                        "on-tertiary-fixed": "#121f00",
+                        "surface": "#f8f9fa",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1d",
+                        "on-tertiary-container": "#aeec50",
+                        "outline": "#707973",
+                        "on-primary-fixed": "#002114",
+                        "on-primary-container": "#a8e7c5",
+                        "surface-dim": "#d9dadb",
+                        "secondary": "#006399",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#334f00",
+                        "on-surface": "#191c1d",
+                        "surface-tint": "#2c694e",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#004b74",
+                        "secondary-container": "#67bafd",
+                        "error": "#ba1a1a",
+                        "primary": "#0f5238",
+                        "primary-container": "#2d6a4f",
+                        "on-surface-variant": "#404943",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed-dim": "#9cd83e",
+                        "on-primary-fixed-variant": "#0e5138",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed": "#b1f0ce",
+                        "surface-container-highest": "#e1e3e4",
+                        "tertiary-fixed": "#b7f558",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#95d4b3",
+                        "secondary-fixed": "#cde5ff",
+                        "surface-bright": "#f8f9fa",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#324f00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f5238 0%, #2d6a4f 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-[0_8px_24px_rgba(25,28,29,0.06)] h-20">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-full">
+<div class="text-xl font-bold tracking-tighter text-emerald-900 font-headline">
+                Consciência Ambiental
+            </div>
+<div class="hidden md:flex gap-8 items-center font-headline text-sm tracking-tight">
+<a class="text-emerald-700 font-bold border-b-2 border-emerald-600" href="index.html">Home</a>
+<a class="text-slate-600 hover:text-emerald-600 transition-colors" href="metodologia.html">Metodologia</a>
+<a class="text-slate-600 hover:text-emerald-600 transition-colors" href="atividades.html">Atividades</a>
+<a class="text-slate-600 hover:text-emerald-600 transition-colors" href="resultados.html">Resultados</a>
+<a class="text-slate-600 hover:text-emerald-600 transition-colors" href="equipe.html">Equipe</a>
+<a class="text-slate-600 hover:text-emerald-600 transition-colors" href="dicas.html">Dicas</a>
+</div>
+            <button onclick="window.location.href='equipe.html'" class="bg-primary text-white px-6 py-2.5 rounded-xl font-headline text-sm font-semibold hover:opacity-90 transition-all shadow-sm">
+                Entre em Contato
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-20 min-h-screen flex items-center overflow-hidden" id="home">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20" data-alt="lush green sustainable garden with children learning about plants in soft morning sunlight and organic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9oM0smHHk51IDBEE80cIkqMc76x12-9UWCS-3mh4YrbsfThT97ZuhbFidx1eO33hohdIQsL6McD_3Vs2F1Bd97UkghUt6sfxIBB-cUVPHUlFsDFLHFjpYknv-w_uhT9Bzxtxsgk3P4AsHT1vIWpxHm8PzwnrdglJJPATjYuqtDt8M4NaWC9S-oSmIOyQ3HI8xsHOVO4aHRnOoCoypNOqgkNkthZ2Ph1hntOuOyzN61DtIIn7SVBOR7nKKyv2dZ4oKZYYYydaX2xP3"/>
+</div>
+<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center relative z-10">
+<div>
+<span class="inline-block px-4 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs font-bold uppercase tracking-widest mb-6">Educação Sustentável</span>
+<h1 class="text-5xl md:text-7xl font-extrabold font-headline leading-[1.1] text-on-surface mb-8 tracking-tight">
+                    Plantando o Futuro no <span class="text-primary">Lar Fabiano de Cristo</span>
+</h1>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-lg">
+                    Transformando a consciência ambiental de crianças e jovens através de práticas educativas inovadoras e conexão direta com a natureza.
+                </p>
+<div class="flex gap-4">
+                    <button onclick="window.location.href='metodologia.html'" class="hero-gradient text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:translate-y-[-2px] transition-transform">
+                        Conhecer Projeto
+                    </button>
+                    <button onclick="window.location.href='resultados.html'" class="bg-surface-container-lowest text-primary px-8 py-4 rounded-xl font-bold shadow-sm border border-outline-variant/15 hover:bg-surface-container-low transition-colors">
+                        Nossas Metas
+                    </button>
+</div>
+</div>
+<div class="relative">
+<div class="rounded-3xl overflow-hidden shadow-2xl rotate-3 translate-x-4">
+<img class="w-full h-[500px] object-cover" data-alt="hands of a child holding a small green sprout in rich dark soil with gentle natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAracemNejRUKy41Zgms9j2QVb01wavqtuZVUzx1TZVUIZc6GWmCd8ljT95eLF3msQ0IvUttYkCmgGG8dG6DTi1Q2XsqGOJPhcSkflHLpyAPRDPD4Fhoaij-DwAXjYjJ6EaBMesPjcC4bDWKO-_ZezaUc80xvGhCV21F9NH-v5tFA-g9d5xsrUZ-AxemMncZlDMKyd0ef_9AuEbvPKI3iKLvhmbCezuRXdePK8LCr_YoJ_uLfYohurlULYAW-vdj3DAnbpDFy3eOryA"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[240px] -rotate-2">
+<p class="text-primary font-bold text-2xl mb-1">200+</p>
+<p class="text-xs text-on-surface-variant font-medium">Crianças impactadas mensalmente pelo Team EcoAção</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Presentation Section -->
+<section class="py-32 bg-surface" id="project">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-lg bg-surface-container-low p-8">
+<img class="w-full h-full object-cover rounded-2xl" data-alt="sustainable organic vegetable garden inside a community center with clear blue sky and bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3MAqUKMuAbbWmuYz6cry1aP4WC60WprUPjAFXld0YxpgDXLHlbDJR0xV1u64kX2TiwhHs8JdVKaaRd4KZYx8_m1Inp20TBHg4gstjEC3Px4g1eEBTRLbaOvyw2FC3mi_rqJkntitcttq1IhXrD6QDsc1h5vGgZVhOjl7oHcSNsN882VNea1QCqSfp4HdXLzWDw23Nke5TOGD3oes7vZXsithU-FgEmHfyrZZZwNKQ1G5t7ADjgcgFIoUR2o0-ozSsFBMhZRm3tLOj"/>
+</div>
+</div>
+<div class="md:col-span-7">
+<h2 class="text-4xl font-extrabold font-headline mb-8 text-on-surface tracking-tight">O Projeto &amp; Lar Fabiano de Cristo</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p>
+                            O projeto <span class="font-bold text-primary">Consciência Ambiental na Infância</span> nasce da união entre o propósito educativo do Lar Fabiano de Cristo e a visão inovadora do Team EcoAção. Nossa missão é integrar a sustentabilidade ao cotidiano institucional, tornando-a um pilar fundamental no desenvolvimento humano.
+                        </p>
+<p>
+                            Atuamos diretamente no Lar Fabiano de Cristo, um espaço dedicado à promoção da cidadania e assistência social, onde transformamos espaços ociosos em laboratórios vivos de aprendizado sobre reciclagem, hortas orgânicas e preservação hídrica.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Objectives Bento Grid -->
+<section class="py-32 bg-surface-container-low" id="objectives">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-extrabold font-headline mb-4 text-on-surface">Nossos Objetivos Claros</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Diretrizes que guiam cada ação do Team EcoAção para um futuro mais verde e consciente.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+<h3 class="text-xl font-bold font-headline mb-4">Educação Ativa</h3>
+<p class="text-on-surface-variant leading-relaxed">Desenvolver oficinas práticas que ensinam sobre o ciclo da vida e a importância da biodiversidade local.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-icon="water_drop" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<h3 class="text-xl font-bold font-headline mb-4">Gestão de Recursos</h3>
+<p class="text-on-surface-variant leading-relaxed">Implementar sistemas de captação de água da chuva e compostagem para resíduos orgânicos da instituição.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-4xl text-tertiary-container mb-6" data-icon="groups" style="font-variation-settings: 'FILL' 1;">groups</span>
+<h3 class="text-xl font-bold font-headline mb-4">Engajamento Familiar</h3>
+<p class="text-on-surface-variant leading-relaxed">Levar o conhecimento sustentável para além dos muros do Lar, atingindo as famílias e a comunidade.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Methodology Asymmetric Section -->
+<section class="py-32 bg-surface overflow-hidden" id="methodology">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="text-4xl font-extrabold font-headline mb-8 text-on-surface">Metodologia Living Archive</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary">01</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Observação Participativa</h4>
+<p class="text-on-surface-variant">Crianças exploram o ambiente identificando desafios ambientais reais em sua comunidade.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary">02</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Intervenção Criativa</h4>
+<p class="text-on-surface-variant">Criação conjunta de soluções, desde brinquedos reciclados até o plantio de mudas nativas.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary">03</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Monitoramento Coletivo</h4>
+<p class="text-on-surface-variant">Acompanhamento dos resultados e celebração das conquistas sustentáveis do grupo.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="bg-primary-container/10 absolute -inset-10 rounded-full blur-3xl"></div>
+<img class="relative z-10 rounded-3xl shadow-2xl" data-alt="diverse group of creative people collaborating around a wooden table in a brightly lit modern eco-friendly studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf8M2kvO1rsxCv95SfmnkfKzhWajUaJmalXv5DytgoIhCzlNsw58dMLloiX1yNxE8Dkt7TjLTJu0jgtjDxT16MaVYifXJ8K2lqeSajSxizMkCx-2uCtmqcva51oOcehkNmgii5IUUiBDZCRFMm4WJRRN-5oRJssZ4oqlSyfHvqV7kEtJ4syvvvrVBKqU-UOzBHwDEIFMkjDNwOMbfC4aVV-ZpCXPicWEVAhEMZrat4bTuYzFbuVQnIrJ-2ar1EWbqaQ-_sPsSTjVgr"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Activities & Workshops -->
+<section class="py-32 bg-surface-container-low" id="activities">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-4xl font-extrabold font-headline text-on-surface">Atividades &amp; Workshops</h2>
+<p class="text-on-surface-variant mt-4">Ações práticas que transformam teoria em mudança real.</p>
+</div>
+<button onclick="window.location.href='equipe.html'" class="text-primary font-bold flex items-center gap-2 hover:underline">
+                    Ver Calendário <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Activity Card 1 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="child planting small plants in colorful pots in a sunlit classroom setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiACP0eeuPqF7oQOz_jvB3pkSZ_xsYaE23HHczmbRhoa_Jxk_1FV--DjpfZhPEnonhOA4cm9PoFdwcsurWH9rE8W-gkIJlv4bgFONlWy1FT86Dt4SxgaFcQ2eDr6X2LlC0-iQYsDBgI2N3nJATkCZwmbOec_A-b-yiyto5TG3bOytDjW8bbNzSZwYWlRcE9pprzETA1icvVZbeW-w2IFXQX8XloxEBsczfnwtVVUMqkWoDrNqxCRfHBD08eFcHgFowUXbgdEPhn_tw"/>
+<span class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold">Horta</span>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold font-headline mb-4">Horta Vertical Comunitária</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Oficina de plantio em garrafas PET e recipientes reutilizados para cultivo de ervas e hortaliças.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span> Sábados Alternados
+                        </div>
+</div>
+</div>
+<!-- Activity Card 2 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="various colorful recycled materials and plastic containers ready for upcycling into art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHggeottgD5wqmPOMBmRWvMld3a-zTR3gW2T2M1FIb2xNGgkvB4z3Vbiz-dqAu6Utr7r5xfhWeOuO_J0bQn20iw9YM7-__CWNAWsTyDlz-dXIVIM9Pn7E4AHcVUqLFkFeXaaPBTqd_ceD07IyYUBTSja_De-UYEGJ25NbLnmUIE5ye40OJmwhZya0jbLpiEG55W6gTUmGz1l1Bn_HSzc5RbQbSZjLiTBQen4MfYYhlYDglCyWPQEED-tIPUI_CJvxYQzS0xP10nDYJ"/>
+<span class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold">Reciclagem</span>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold font-headline mb-4">Arte com Descarte</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Transformando o que seria lixo em arte e utilitários, ensinando sobre economia circular de forma lúdica.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span> Quartas-feiras
+                        </div>
+</div>
+</div>
+<!-- Activity Card 3 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="scientific experiment with water and natural elements conducted by students in an outdoor lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5q_kaN5gycf3HMiCsDbWxf7TeSDCBUaElSSCHYx6ikhWcF1fJvKuqAQgT5xesmz7XKo9bwd_7KEX4LWEceG_uxo0gmXs5GwomkVngFEwGaSDgOTqz9JJDRTd-FmAvboKhxMJicUsBJPUFdAh-i3xVbHz8ulaEr1tAcBz1arEQKn9n3eoVe8T6PU8NN9wB26j-n1BQq-xBHWY47cJTOd2pepMdWp2tJO-GZSbZpjk9PMzqf1bEbe3T3Nc8MhAnfiqvGIXKVCw5Mskp"/>
+<span class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold">Ciência</span>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold font-headline mb-4">Eco-Cientistas Mirins</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Experimentos simples para entender a filtragem da água, erosão do solo e poluição atmosférica.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span> Mensal
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Expected Results -->
+<section class="py-32 bg-emerald-900 text-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-4xl font-extrabold font-headline mb-8">Impacto &amp; Resultados Esperados</h2>
+<p class="text-emerald-100/80 text-lg leading-relaxed mb-12">Nossa meta não é apenas ensinar, mas formar cidadãos que vejam o meio ambiente como extensão de si mesmos.</p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<p class="text-4xl font-extrabold text-tertiary-fixed mb-2">90%</p>
+<p class="text-sm font-medium text-emerald-100">Engajamento dos alunos nas atividades práticas</p>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-tertiary-fixed mb-2">40%</p>
+<p class="text-sm font-medium text-emerald-100">Redução de resíduos orgânicos descartados</p>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-tertiary-fixed mb-2">150</p>
+<p class="text-sm font-medium text-emerald-100">Mudas nativas plantadas anualmente</p>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-tertiary-fixed mb-2">∞</p>
+<p class="text-sm font-medium text-emerald-100">Consciência geracional multiplicada</p>
+</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/10">
+<h4 class="text-xl font-bold mb-6">Cidadania e Sustentabilidade</h4>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="check_circle">check_circle</span>
+<span>Melhoria na percepção crítica sobre consumo e descarte.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="check_circle">check_circle</span>
+<span>Fortalecimento do vínculo comunitário e senso de pertencimento ao Lar.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="check_circle">check_circle</span>
+<span>Adoção de hábitos saudáveis e nutritivos através da horta escolar.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="check_circle">check_circle</span>
+<span>Capacitação para multiplicação de técnicas eco-sustentáveis em casa.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-32 bg-surface" id="team">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-extrabold font-headline mb-4 text-on-surface">Equipe EcoAção</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Especialistas apaixonados por educação e meio ambiente trabalhando juntos.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Team Member -->
+<div class="text-center">
+<div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a male environmental educator with a warm smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9cBv-5wviidM9unLr-xRwNlbMrrTGkuzlTNfWEKrwiZDawbV1sHUeXz0CDH2KLxbHNrrdry1D1TK1P0QB7l65pq_j4mo3hI0CJetHyVp4fWx0W8Zn1DN6nHJyacHKgobOve66YH4_IAgpWFwyZU-coqOfpAQD7zRSukasYdZ97xiCTVdsMr1UY-5HyGbHnfECdGOTPGU6ldSOfBQ2QRsnZPpUuW3oAOOSNRwY169AB0stmsnfXiWtIckQ1I417uKHEN9wnGB_wk_l"/>
+</div>
+<h4 class="font-bold text-lg font-headline">Ricardo Silva</h4>
+<p class="text-primary text-sm font-semibold mb-2">Coordenador de Projetos</p>
+</div>
+<!-- Team Member -->
+<div class="text-center">
+<div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a female educational psychologist in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwvq96Wy45AGS4L_TfSUeB9NsuNMihOSQAzu2d1py3qOdV2xmt-HgSOON1-wLJQOmHluKTnc7PKDZ7jfS5n5cfGy077p7kpgBL2IcenmlySS9vxSrJG84rFELb2NmU7HuZSsPR5xya4m4ZDy9Jw3Vt89GUBHiwKqIY6xdjXr97N6CcTALXi6tRUfhXjKFgqO_T7QIPIPZr5PyIfolZlLOi3guJBcKpgFQgLzfvoDMjDtx7YgZDQDKNIYC4L7KXKFLparqQU2VEwVjo"/>
+</div>
+<h4 class="font-bold text-lg font-headline">Ana Paula</h4>
+<p class="text-primary text-sm font-semibold mb-2">Psicopedagoga</p>
+</div>
+<!-- Team Member -->
+<div class="text-center">
+<div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="portrait of a young male biologist wearing casual field clothes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHFFN0S6bsR6YJzdKSiZWw-opxgEvQ6S_dnsI6I-es4EWU8dqpqq9u5HOSvl25slhUlHzKZNdRaMGWEyH-yFIPfLBttp7gFjtvXm5mYdU-fC78w8yYIBoqOSLsqtBGswacuca_YUpXB9qLFeLuPFxrzbMq8vtyzgLGg4tHjFhCUuZ8skVLXGSkSN58AHAJufXgCDu17i2xPS9TV5MDnaeb_rZNL0Kv61PB4E9F7Wyc9kUHapgEITBPHo1o8DOJa1I3eQ5W_9I_V10B"/>
+</div>
+<h4 class="font-bold text-lg font-headline">Marcos Oliveira</h4>
+<p class="text-primary text-sm font-semibold mb-2">Biólogo Educador</p>
+</div>
+<!-- Team Member -->
+<div class="text-center">
+<div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="portrait of a female social worker with a confident and friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Fpn_ZR4C76DPGMqqsLxAnikAXmZ7bC5wNhEbCTRyK0CfZVeYKLS9vvH8fZqydoa9gTgz5JEULc9PlnrBGqPa2-xzct7uj3Ob9vfhl-mcS2Io83FyMicliA0MB1kUAQuVYkItjM5jfBPHQqQWTNFFqNTuH9Kf-Lce4QDsTy33BMen81eISkJ1PRWoonGnSKVVOOpg9og5VtkcBAJAjrFTnGfSoauF6FoCE00WzR2UdgyhTw_42mlR0-CSkaGSXj1PS3NmWbF5jRKn"/>
+</div>
+<h4 class="font-bold text-lg font-headline">Julia Costa</h4>
+<p class="text-primary text-sm font-semibold mb-2">Gestora Social</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 bg-surface-container-low" id="contact">
+<div id="cadastro" class="max-w-7xl mx-auto px-8">
+<div class="bg-surface-container-lowest rounded-[3rem] shadow-xl overflow-hidden grid md:grid-cols-2">
+<div class="p-12 md:p-20">
+<h2 class="text-4xl font-extrabold font-headline mb-8">Vamos Conversar?</h2>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-bold mb-2">Nome Completo</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary transition-all" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2">Email</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary transition-all" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2">Mensagem</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary transition-all" rows="4"></textarea>
+</div>
+<button class="w-full hero-gradient text-white font-bold py-4 rounded-xl shadow-lg hover:opacity-90 transition-opacity">
+                            Enviar Mensagem
+                        </button>
+</form>
+</div>
+<div class="bg-emerald-950 p-12 md:p-20 text-white flex flex-col justify-between">
+<div>
+<h4 class="text-2xl font-bold mb-8">Informações de Contato</h4>
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="location_on">location_on</span>
+<p class="text-emerald-100/80">R. Itabaiana, 160 - Meier, Rio de Janeiro - RJ</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="mail">mail</span>
+<p class="text-emerald-100/80">contato@ecoacao.org.br</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="call">call</span>
+<p class="text-emerald-100/80">+55 (21) 3255-0000</p>
+</div>
+</div>
+</div>
+<div class="pt-12">
+<p class="text-xs font-bold uppercase tracking-widest text-emerald-100/40 mb-4">Siga-nos</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined cursor-pointer hover:text-tertiary-fixed transition-colors" data-icon="public">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-tertiary-fixed transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-tertiary-fixed transition-colors" data-icon="favorite">favorite</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-emerald-900 text-emerald-50 w-full rounded-t-3xl mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto px-12 py-16">
+<div class="space-y-6">
+<div class="text-lg font-extrabold text-white font-headline">Consciência Ambiental</div>
+<p class="text-emerald-100/70 text-sm leading-relaxed">Promovendo a transformação social através da educação ambiental e do amor à natureza no Lar Fabiano de Cristo.</p>
+</div>
+<div class="space-y-6">
+<h5 class="font-headline text-xs uppercase tracking-widest font-bold">Acesso Rápido</h5>
+<ul class="space-y-4 font-headline text-xs uppercase tracking-widest">
+<li><a class="text-emerald-100/70 hover:text-white transition-all hover:translate-x-1 inline-block" href="index.html">Início</a></li>
+<li><a class="text-emerald-100/70 hover:text-white transition-all hover:translate-x-1 inline-block" href="metodologia.html">Metodologia</a></li>
+<li><a class="text-emerald-100/70 hover:text-white transition-all hover:translate-x-1 inline-block" href="atividades.html">Atividades</a></li>
+<li><a class="text-emerald-100/70 hover:text-white transition-all hover:translate-x-1 inline-block" href="equipe.html">Equipe</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-headline text-xs uppercase tracking-widest font-bold">Newsletter</h5>
+<p class="text-emerald-100/70 text-sm">Receba atualizações sobre nossas oficinas e conquistas.</p>
+<div class="flex gap-2">
+<input class="bg-white/10 border-none rounded-lg px-4 py-2 text-sm focus:ring-1 focus:ring-tertiary-fixed w-full" placeholder="Seu email" type="email"/>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-4 py-2 rounded-lg font-bold text-sm">OK</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 pb-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-headline text-emerald-100/40">
+<p>© 2024 CONSCIÊNCIA AMBIENTAL NA INFÂNCIA. PRESERVANDO O FUTURO ATRAVÉS DA EDUCAÇÃO.</p>
+<p>DESENVOLVIDO POR EQUIPE ECOAÇÃO</p>
+</div>
+</footer>
+</body></html>
