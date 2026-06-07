@@ -98,10 +98,14 @@ const Team = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-y-16">
             {/* Team members */}
             {[
-              { name: 'Thais', role: 'Coordenação Geral', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDcKjUx8RDdjap7j6KvsoOmugYxXfDg8nyIoMkP4oWX1mI7JM0bE8l8iPXzqQRzEse1imh8h-NT-L7ofZBus0ZEJHFLrPp6lZliqnpnvyVSBVvuH4jNUZEHioSfySyyFL_Hy5rDLxSLtPJusgEMiKgFvSPAjin1t3zt8qW9TWzBnKqkvt0TzLwiiCNPLujCjnFZ-8_Bj-voHGHWhHxGIyPMBc2dto3VLwXGLV-bTnz0axvGLwSEVfaZ_oKG4i2tR3aWYoGgRAG6fbZA' },
-              { name: 'Isabela', role: 'Vice-Liderança', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBnb0evXKJ44wfww5RzuHXvmS6nAJGa5P8XXNHldDajStz6Pgm6AcIcPhLgmc7StdAn93KIEQHXqBBFAE4NfsI-xWgXj6IrMdK_gP3TPzzOo8PSWzdzIWmJUABUcVNek5dz2eEiY_v1kDTb1zIq9Ln-AwMu-HdTAH12PELZBOBOLg-E_x4R3PC2Q1E69lv_d6cXDY7Wv2Ulg2T1QXGMoIbv5Fh-bnYde_D0GKwTJaK1iXVwZq17PmDir94TQtKDGvP3vXd7ehoz6MaG' },
-              { name: 'Renata', role: 'Planejamento', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA1aO0Bb3U1vHhd0Rjy8pW77iusH82Ti4QgTuEUbD-6uRQwRc5KWceWI1AQpNtD35daodzIrui2WjVCFPGHdPNmOkpwVLhrJr8LGjM2uCl53gkh0BdNC2Ckq59gaVMIVObi_OMfXwyDFphKKuFRvZBi3euCX1SwBwkJgZvFws87NP-yLR8kmvuD0fGkeG7gxfewwr8NBLpdvQm1HCGD2Sk22qqVIbXlkIa7nCXOINPjY16BkTPdpfmy59PouoqJoWF9zGLwyMIrimZc' },
-              { name: 'Emilly', role: 'Sistemas', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB3uvaavLT25M8eyZkpS_UGz_Jl7y6AE9dW8Aj9vTbQY1jStZXigbcHk1WQhAXYw_hXye04rkP9F_fQcdME2v9rGYTjobBTbGoBawKPYad-Xu3JVfGDh5AvM5_yKBD3dsxeol4k2PStWHTVIDTdyCryGvy1oEIGGbYcffHdkyVZgHYHl3mgms9DRINCNJbIL4hj81raiW2_CmeBq28_ykWC072r4b-HkGoez2AVgT5yBlkbHjggd0-mC5ntpPBdOYGBoGamlctA33NM' }
+              { name: 'Thais', role: 'Líder do Projeto', img: 'src/assets/thais.jpeg' },
+              { name: 'Isabela', role: 'Vice-Liderança', img: 'src/assets/isabele.jpg' },
+              { name: 'Renata', role: 'Planejamento', img: 'src/assets/foto de renata.jpeg' },
+              { name: 'Emilly', role: 'Sistemas', img: 'src/assets/emilly.jpeg' },
+              { name: 'Livia Maria', role: 'Oficinas', img: 'src/assets/livia.jpeg' },
+              { name: 'Caleane de Jesus', role: 'Divulgação', img: 'src/assets/caleane.jpeg' },
+              { name: 'Macio Souza', role: 'Materiais', img: 'src/assets/Macio Souza.jpg' },
+              { name: 'Natan Vinicius', role: 'Avaliação', img: 'src/assets/Natan Vinicius.jpg' }
             ].map((member, i) => (
               <div key={member.name} className={`group ${i % 2 !== 0 ? 'lg:pt-12' : ''}`}>
                 <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 shadow-ambient bg-surface-container-low border border-outline-variant/5">
