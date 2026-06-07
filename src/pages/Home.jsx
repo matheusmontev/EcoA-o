@@ -338,7 +338,7 @@ const Home = () => {
                     <span className="material-symbols-outlined text-tertiary-fixed p-2 bg-white/5 rounded-xl">location_on</span>
                     <div>
                       <p className="text-xs font-bold uppercase tracking-widest text-primary-fixed/40 mb-1">Endereço</p>
-                      <p className="text-sm md:text-base text-primary-fixed/80">R. Itabaiana, 160 - Meier, Rio de Janeiro - RJ</p>
+                      <p className="text-sm md:text-base text-primary-fixed/80">Lar Fabiano de Cristo - Casa de Rachel Avenida Manoel Souza Chaves, 1576 - Jaçanã, Itabuna </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
