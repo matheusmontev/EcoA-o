@@ -246,31 +246,65 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Ricardo Silva" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9cBv-5wviidM9unLr-xRwNlbMrrTGkuzlTNfWEKrwiZDawbV1sHUeXz0CDH2KLxbHNrrdry1D1TK1P0QB7l65pq_j4mo3hI0CJetHyVp4fWx0W8Zn1DN6nHJyacHKgobOve66YH4_IAgpWFwyZU-coqOfpAQD7zRSukasYdZ97xiCTVdsMr1UY-5HyGbHnfECdGOTPGU6ldSOfBQ2QRsnZPpUuW3oAOOSNRwY169AB0stmsnfXiWtIckQ1I417uKHEN9wnGB_wk_l"/>
+                <img className="w-full h-full object-cover" alt="Thais Santos" src="src/assets/thais.jpeg"/>
               </div>
-              <h4 className="font-bold text-lg font-headline">Ricardo Silva</h4>
-              <p className="text-primary text-sm font-semibold mb-2">Coordenador de Projetos</p>
+              <h4 className="font-bold text-lg font-headline">Thais Santos</h4>
+              <p className="text-primary text-sm font-semibold mb-2">Líder do projeto</p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Ana Paula" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwvq96Wy45AGS4L_TfSUeB9NsuNMihOSQAzu2d1py3qOdV2xmt-HgSOON1-wLJQOmHluKTnc7PKDZ7jfS5n5cfGy077p7kpgBL2IcenmlySS9vxSrJG84rFELb2NmU7HuZSsPR5xya4m4ZDy9Jw3Vt89GUBHiwKqIY6xdjXr97N6CcTALXi6tRUfhXjKFgqO_T7QIPIPZr5PyIfolZlLOi3guJBcKpgFQgLzfvoDMjDtx7YgZDQDKNIYC4L7KXKFLparqQU2VEwVjo"/>
+                <img className="w-full h-full object-cover" alt="isabela" src="src/assets/isabele.jpg"/>
               </div>
-              <h4 className="font-bold text-lg font-headline">Ana Paula</h4>
-              <p className="text-primary text-sm font-semibold mb-2">Psicopedagoga</p>
+              <h4 className="font-bold text-lg font-headline">Isabela França</h4>
+              <p className="text-primary text-sm font-semibold mb-2">Vice lider do projeto</p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Marcos Oliveira" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHFFN0S6bsR6YJzdKSiZWw-opxgEvQ6S_dnsI6I-es4EWU8dqpqq9u5HOSvl25slhUlHzKZNdRaMGWEyH-yFIPfLBttp7gFjtvXm5mYdU-fC78w8yYIBoqOSLsqtBGswacuca_YUpXB9qLFeLuPFxrzbMq8vtyzgLGg4tHjFhCUuZ8skVLXGSkSN58AHAJufXgCDu17i2xPS9TV5MDnaeb_rZNL0Kv61PB4E9F7Wyc9kUHapgEITBPHo1o8DOJa1I3eQ5W_9I_V10B"/>
+                <img className="w-full h-full object-cover" alt="Renata de Almeida" src="src/assets/foto de renata.jpeg"/>
               </div>
-              <h4 className="font-bold text-lg font-headline">Marcos Oliveira</h4>
-              <p className="text-primary text-sm font-semibold mb-2">Biólogo Educador</p>
+              <h4 className="font-bold text-lg font-headline">Renata de Almeida</h4>
+              <p className="text-primary text-sm font-semibold mb-2">Responsável por Planejamento </p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Julia Costa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Fpn_ZR4C76DPGMqqsLxAnikAXmZ7bC5wNhEbCTRyK0CfZVeYKLS9vvH8fZqydoa9gTgz5JEULc9PlnrBGqPa2-xzct7uj3Ob9vfhl-mcS2Io83FyMicliA0MB1kUAQuVYkItjM5jfBPHQqQWTNFFqNTuH9Kf-Lce4QDsTy33BMen81eISkJ1PRWoonGnSKVVOOpg9og5VtkcBAJAjrFTnGfSoauF6FoCE00WzR2UdgyhTw_42mlR0-CSkaGSXj1PS3NmWbF5jRKn"/>
+                <img className="w-full h-full object-cover" alt="Julia Costa" src="src/assets/emilly.jpeg"/>
               </div>
-              <h4 className="font-bold text-lg font-headline">Julia Costa</h4>
-              <p className="text-primary text-sm font-semibold mb-2">Gestora Social</p>
+              <h4 className="font-bold text-lg font-headline">Emilly Santos</h4>
+              <p className="text-primary text-sm font-semibold mb-2">Responsável por Sistemas de Informação</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
+                <img className="w-full h-full object-cover" alt="Ricardo Silva" src="src/assets/livia.jpeg"/>
+              </div>
+              <h4 className="font-bold text-lg font-headline">Livia Maria</h4>
+              <p className="text-primary text-sm font-semibold mb-2">Responsável por Educação e 
+Oficinas</p>
+            </div>
+            <div className="text-center">
+              <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
+                <img className="w-full h-full object-cover" alt="Ana Paula" src="src/assets/caleane.jpeg"/>
+              </div>
+              <h4 className="font-bold text-lg font-headline">Caleane de Jesus </h4>
+              <p className="text-primary text-sm font-semibold mb-2">Responsável por Comunicação e 
+Divulgação</p>
+            </div>
+            <div className="text-center">
+              <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
+                <img className="w-full h-full object-cover" alt="Macio Souza" src="src/assets/Macio Souza.jpg"/>
+              </div>
+              <h4 className="font-bold text-lg font-headline">Macio Souza</h4>
+              <p className="text-primary text-sm font-semibold mb-2">Responsável por Sustentabilidade e 
+Materiais</p>
+            </div>
+            <div className="text-center">
+              <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
+                <img className="w-full h-full object-cover" alt="Natan Vinicius" src="src/assets/Natan Vinicius.jpg"/>
+              </div>
+              <h4 className="font-bold text-lg font-headline">Natan Vinicius</h4>
+              <p className="text-primary text-sm font-semibold mb-2">Responsável por Avaliação e 
+Resultados</p>
             </div>
           </div>
         </div>
