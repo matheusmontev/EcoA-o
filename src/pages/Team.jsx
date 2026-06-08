@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// O '../' serve para sair da pasta 'components' e entrar na pasta 'assets'
 import fotoThais from '../assets/thais.jpeg';
 import fotoIsabela from '../assets/isabele.jpg';
-import fotoRenata from '../../assets/foto de renata.jpeg'; // Atenção ao nome com espaços
+import fotoRenata from '../assets/foto de renata.jpeg';
 import fotoEmilly from '../assets/emilly.jpeg';
 import fotoLivia from '../assets/livia.jpeg';
 import fotoCaleane from '../assets/caleane.jpeg';
-import fotoMacio from '../assets/Macio Souza.jpg';       // Atenção ao nome com espaços
-import fotoNatan from '../assets/Natan Vinicius.jpg';   // Atenção ao nome com
+import fotoMacio from '../assets/Macio Souza.jpg';       
+import fotoNatan from '../assets/Natan Vinicius.jpg';   
 
 const Team = () => {
   return (

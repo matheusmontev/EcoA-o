@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebase';
+import fotoThais from '../assets/thais.jpeg';
+import fotoIsabela from '../assets/isabele.jpg';
+import fotoRenata from '../assets/foto de renata.jpeg';
+import fotoEmilly from '../assets/emilly.jpeg';
+import fotoLivia from '../assets/livia.jpeg';
+import fotoCaleane from '../assets/caleane.jpeg';
+import fotoMacio from '../assets/Macio Souza.jpg';
+import fotoNatan from '../assets/Natan Vinicius.jpg';
 
 const Home = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -246,28 +254,28 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Thais Santos" src="src/assets/thais.jpeg"/>
+                <img src={fotoThais} />
               </div>
               <h4 className="font-bold text-lg font-headline">Thais Santos</h4>
               <p className="text-primary text-sm font-semibold mb-2">Líder do projeto</p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="isabela" src="src/assets/isabele.jpg"/>
+                <img src={fotoIsabela}/>
               </div>
               <h4 className="font-bold text-lg font-headline">Isabela França</h4>
               <p className="text-primary text-sm font-semibold mb-2">Vice lider do projeto</p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Renata de Almeida" src="src/assets/foto de renata.jpeg"/>
+                <img src={fotoRenata} />
               </div>
               <h4 className="font-bold text-lg font-headline">Renata de Almeida</h4>
               <p className="text-primary text-sm font-semibold mb-2">Responsável por Planejamento </p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Julia Costa" src="src/assets/emilly.jpeg"/>
+                <img src={fotoEmilly}/>
               </div>
               <h4 className="font-bold text-lg font-headline">Emilly Santos</h4>
               <p className="text-primary text-sm font-semibold mb-2">Responsável por Sistemas de Informação</p>
@@ -276,7 +284,7 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Ricardo Silva" src="src/assets/livia.jpeg"/>
+                <img src={fotoLivia}/>
               </div>
               <h4 className="font-bold text-lg font-headline">Livia Maria</h4>
               <p className="text-primary text-sm font-semibold mb-2">Responsável por Educação e 
@@ -284,7 +292,7 @@ Oficinas</p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Ana Paula" src="src/assets/caleane.jpeg"/>
+                <img src={fotoCaleane}/>
               </div>
               <h4 className="font-bold text-lg font-headline">Caleane de Jesus </h4>
               <p className="text-primary text-sm font-semibold mb-2">Responsável por Comunicação e 
@@ -292,7 +300,7 @@ Divulgação</p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Macio Souza" src="src/assets/Macio Souza.jpg"/>
+                <img src={fotoMacio}/>
               </div>
               <h4 className="font-bold text-lg font-headline">Macio Souza</h4>
               <p className="text-primary text-sm font-semibold mb-2">Responsável por Sustentabilidade e 
@@ -300,7 +308,7 @@ Materiais</p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary-fixed">
-                <img className="w-full h-full object-cover" alt="Natan Vinicius" src="src/assets/Natan Vinicius.jpg"/>
+                <img src={fotoNatan}/>
               </div>
               <h4 className="font-bold text-lg font-headline">Natan Vinicius</h4>
               <p className="text-primary text-sm font-semibold mb-2">Responsável por Avaliação e 
