@@ -26,7 +26,7 @@ const Methodology = () => {
   };
 
   const steps = [
-    { id: '01', title: 'Diagnóstico', desc: 'Levantamento profundo de hábitos e escuta ativa da comunidade para entender as dores e potenciais locais.', color: 'bg-primary-fixed text-on-primary-fixed', tag: 'Análise' },
+    { id: '01', title: 'Diagnóstico', desc: 'A iniciativa de Inovação Social e Resiliência Urbana, baseada na Economia Circular Adaptada, impacta positivamente a segurança alimentar, saúde mental e coesão comunitária, sem custo de insumos.', color: 'bg-primary-fixed text-on-primary-fixed', tag: 'Análise' },
     { id: '02', title: 'Planejamento', desc: 'Organização de oficinas colaborativas onde cada voz é ouvida, desenhando soluções em conjunto.', color: 'bg-secondary-fixed text-on-secondary-fixed', tag: 'Estratégia' },
     { id: '03', title: 'Execução', desc: 'Vivências lúdicas e práticas. O fazer que ensina, transforma e gera conexão imediata com o ambiente.', color: 'bg-tertiary-fixed text-on-tertiary-fixed', tag: 'Ação' },
     { id: '04', title: 'Mostra Cultural', desc: 'Celebração e exposição de resultados para toda a comunidade, validando o aprendizado coletivo.', color: 'bg-primary-fixed text-on-primary-fixed', tag: 'Impacto' },
