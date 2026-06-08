@@ -1,6 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// O '../' serve para sair da pasta 'components' e entrar na pasta 'assets'
+import fotoThais from '../assets/thais.jpeg';
+import fotoIsabela from '../assets/isabele.jpg';
+import fotoRenata from '../../assets/foto de renata.jpeg'; // Atenção ao nome com espaços
+import fotoEmilly from '../assets/emilly.jpeg';
+import fotoLivia from '../assets/livia.jpeg';
+import fotoCaleane from '../assets/caleane.jpeg';
+import fotoMacio from '../assets/Macio Souza.jpg';       // Atenção ao nome com espaços
+import fotoNatan from '../assets/Natan Vinicius.jpg';   // Atenção ao nome com
+
 const Team = () => {
   return (
     <main className="pt-20">
@@ -94,28 +104,30 @@ const Team = () => {
             <h2 className="text-4xl md:text-6xl font-headline font-extrabold text-on-surface mb-6">Mural da Equipe</h2>
             <p className="text-lg md:text-xl text-on-surface-variant font-light max-w-2xl">Mentes brilhantes unidas conscientização ambiental das novas gerações.</p>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-y-16">
-            {/* Team members */}
-            {[
-              { name: 'Thais', role: 'Líder do Projeto', img: 'src/assets/thais.jpeg' },
-              { name: 'Isabela', role: 'Vice-Liderança', img: 'src/assets/isabele.jpg' },
-              { name: 'Renata', role: 'Planejamento', img: 'src/assets/foto de renata.jpeg' },
-              { name: 'Emilly', role: 'Sistemas', img: 'src/assets/emilly.jpeg' },
-              { name: 'Livia Maria', role: 'Oficinas', img: 'src/assets/livia.jpeg' },
-              { name: 'Caleane de Jesus', role: 'Divulgação', img: 'src/assets/caleane.jpeg' },
-              { name: 'Macio Souza', role: 'Materiais', img: 'src/assets/Macio Souza.jpg' },
-              { name: 'Natan Vinicius', role: 'Avaliação', img: 'src/assets/Natan Vinicius.jpg' }
-            ].map((member, i) => (
-              <div key={member.name} className={`group ${i % 2 !== 0 ? 'lg:pt-12' : ''}`}>
-                <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 shadow-ambient bg-surface-container-low border border-outline-variant/5">
-                  <img alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" src={member.img}/>
-                </div>
-                <h3 className="font-headline font-bold text-xl md:text-2xl text-on-surface group-hover:text-primary transition-colors text-center md:text-left">{member.name}</h3>
-                <p className="text-on-surface-variant font-medium text-sm text-center md:text-left">{member.role}</p>
-              </div>
-            ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 md:gap-y-16">
+      {[
+        { name: 'Thais', role: 'Líder do Projeto', img: fotoThais },
+        { name: 'Isabela', role: 'Vice-Liderança', img: fotoIsabela },
+        { name: 'Renata', role: 'Planejamento', img: fotoRenata },
+        { name: 'Emilly', role: 'Sistemas', img: fotoEmilly },
+        { name: 'Livia Maria', role: 'Oficinas', img: fotoLivia },
+        { name: 'Caleane de Jesus', role: 'Divulgação', img: fotoCaleane },
+        { name: 'Macio Souza', role: 'Materiais', img: fotoMacio },
+        { name: 'Natan Vinicius', role: 'Avaliação', img: fotoNatan }
+      ].map((member, i) => (
+        <div key={member.name} className={`group ${i % 2 !== 0 ? 'lg:pt-12' : ''}`}>
+          <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 shadow-ambient bg-surface-container-low border border-outline-variant/5">
+            <img 
+              alt={member.name} 
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" 
+              src={member.img}
+            />
           </div>
+          <h3 className="font-headline font-bold text-xl md:text-2xl text-on-surface group-hover:text-primary transition-colors text-center md:text-left">{member.name}</h3>
+          <p className="text-on-surface-variant font-medium text-sm text-center md:text-left">{member.role}</p>
+        </div>
+      ))}
+    </div>
         </div>
       </section>
 
